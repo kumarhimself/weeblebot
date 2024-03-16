@@ -1,0 +1,8 @@
+prefix=/catkin_ws/devel
+
+Name: motors
+Description: Description of motors
+Version: 1.0.0
+Cflags: -I/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

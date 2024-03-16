@@ -1,0 +1,12 @@
+This first version weeble_bot followed the coding style from ECE439:
+We have two nodes controlling the robot:
+	motor_node and motors_command_node in motors package and weeble_bot package respectively
+
+As you probably guessed, motor_node send the command to motor and let it spin, and motors_command_node takes the speed as input from userand passes those parameters to motor_node
+
+To operate the weeble_bot,
+	0. in a terminal, type "sudo pigpiod" -> This activates the gpio needed to control the motor
+	1. in a terminal, type "roscore" -> This starts the roscore to enable controlling the robot by ROS
+	2. in a new terminal, type "rosrun motors motor_node"
+	3. in a new terminal, type "rosrun weeble_bot motors_command_node"
+	4. input values ranging from -480 to 480 into terminal 3 to move the weeble_bot

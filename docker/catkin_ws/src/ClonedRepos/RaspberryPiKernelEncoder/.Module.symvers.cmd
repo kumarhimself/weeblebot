@@ -1,0 +1,1 @@
+cmd_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/Module.symvers := sed 's/ko$$/o/' /home/pi/ClonedRepos/RaspberryPiKernelEncoder/modules.order | scripts/mod/modpost -m -a   -o /home/pi/ClonedRepos/RaspberryPiKernelEncoder/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,8 @@
+prefix=/catkin_ws/devel
+
+Name: weeble_bot
+Description: Description of weeble_bot
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

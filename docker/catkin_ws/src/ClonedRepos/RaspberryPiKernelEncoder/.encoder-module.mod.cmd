@@ -1,0 +1,1 @@
+cmd_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/encoder-module.mod := { echo  /home/pi/ClonedRepos/RaspberryPiKernelEncoder/main.o /home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o;  echo; } > /home/pi/ClonedRepos/RaspberryPiKernelEncoder/encoder-module.mod

@@ -1,0 +1,7 @@
+set(motors_SETUP_PY_SETUP_MODULE "distutils.core")
+set(motors_SETUP_PY_VERSION "1.0.0")
+set(motors_SETUP_PY_SCRIPTS "")
+set(motors_SETUP_PY_PACKAGES "")
+set(motors_SETUP_PY_PACKAGE_DIRS "")
+set(motors_SETUP_PY_MODULES "dual_tb9051ftg_rpi.py")
+set(motors_SETUP_PY_MODULE_DIRS "dual_tb9051ftg_rpi")

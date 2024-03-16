@@ -1,0 +1,39 @@
+Battery Charging:
+
+Connect the balance charge to the DC power supply unit by connecting red wire to "+" and black wire to "-"
+	
+Turn on the DC power supply by pressing the orange button on the lower left corner (ensure the voltage is in range 11-18V, which the balance charger needs as power input)
+	
+Connect the balance charger to the battery in the same style (red to red, black to black). Note that you might need to change the connector to what's shown in the picture below (if it's not there, it's in the box on top of the DC PSU)
+	
+After the balance charger powers up, press the "BATT/PROG" button and press the "DEC", "INC" buttons to change the charging mode to "Pb CHARGE" as shown below.
+	
+Shortly press the "ENTER" button once to adjust the current to 0.5A and press the "ENTER" button one more time to set the voltage to 12.0V(6P). All adjustments are made by pressing "DEC" and/or "INC" buttons.
+	
+Lastly, long press the "ENTER" button to start the charging process. The balance charger will firstly detect if the battery is connected and then charge the battery.
+	
+Depending on the charge remained in the battery, it could take up to 4 hours to fully charge the battery. When the battery is fully charged, the balance charger should automatically finish the charging process and the voltage should read ~13.2V from multimeter.
+
+
+Behind the scene: The Lead Acid batteries have many 2V (nominal value) cells connected in series inside each battery; in our case, because the battery has nominal value of 12V, it is a 6 cell battery.
+Because of the lead acid battery chemistry, each cell holds ~2.2V after being fully charged; hence we have the ~13.2V voltage reading after it's fully charged.
+The charging current 0.5A comes from the rule of thumb that charging current = (0.1~0.25) * battery capacity (Ah); we just choose a middle value of 0.5A.
+ 
+Some terminologies:
+
+    Float voltage:
+    is the voltage at which a battery is maintained after being fully charged to maintain that capacity by compensating for self-discharge of the battery.
+
+    Flood LA Battery vs Sealed LA Battery (or AGM battery in our case):
+    The largest difference between the two battery types is the issue of battery maintenance.
+    With a flooded lead acid battery, water needs to be added every so often, periodic equalization needs to be performed and the specific gravity of the electrolyte needs to be measured on occasion with a hydrometer.
+    Another distinguishing factor with a flooded battery is that they can off-gas hydrogen in certain battery charging conditions, resulting in the battery needing to be vented to release the fumes.
+    In stark contrast to the flooded battery, a sealed lead-acid battery requires no maintenance and do not require venting which is a large selling point for those that do not want to deal with battery maintenance.
+    One potential drawback of a sealed lead-acid battery is that due to the inability to maintain the battery, it may not perform at optimum levels as its flooded counterpart.
+
+ 
+Reference links:
+https://batteryuniversity.com/article/bu-403-charging-lead-acid
+https://www.powerstream.com/SLA.htm
+https://www.solar-electric.com/learning-center/difference-flooded-lead-acid-battery-sealed-lead-acid-battery/
+https://www.digikey.com/Site/Global/Layouts/DownloadPdf.ashx?pdfUrl=C6A39B8C0AB6445A82EDEF71B3F5CEAB (Section 1.2)

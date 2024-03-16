@@ -1,0 +1,6 @@
+<launch> 
+
+  <node name="motors_command_node" pkg="weeble_bot" type="motors_command_node.py" />
+  <node name="motor_node" pkg="motors" type="motor_node.py" />
+  <!-- rostopic pub -r 10 /motors_speed motors/motors_speed_msg {0,0} -->
+</launch>

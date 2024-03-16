@@ -1,0 +1,2 @@
+set(mobrob_util_MESSAGE_FILES "/catkin_ws/src/mobrob_util/msg/ME439SensorsRaw.msg;/catkin_ws/src/mobrob_util/msg/ME439SensorsProcessed.msg;/catkin_ws/src/mobrob_util/msg/ME439WheelSpeeds.msg;/catkin_ws/src/mobrob_util/msg/ME439MotorCommands.msg;/catkin_ws/src/mobrob_util/msg/ME439WheelAngles.msg;/catkin_ws/src/mobrob_util/msg/ME439WheelDisplacements.msg;/catkin_ws/src/mobrob_util/msg/ME439PathSpecs.msg;/catkin_ws/src/mobrob_util/msg/ME439WaypointXY.msg;/catkin_ws/src/mobrob_util/msg/EncodersRaw.msg")
+set(mobrob_util_SERVICE_FILES "")
