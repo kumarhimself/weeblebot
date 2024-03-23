@@ -1,0 +1,28 @@
+<launch> 
+  <!-- load the robot dimensions and tuning -->
+  <rosparam command="load" file="$(find mobrob_util)/src/robot_info.yaml" />
+
+  <!-- node for reading and translating inputs from the ps3 controller, could be replaced with any other node that published a Joy msg in the same format-->
+  <node name="gamepad_node" pkg="weeble_bot_util" type="gamepad_input.py" />
+  
+  <!-- node for turning joystick inputs into motor powers, can be edited to change what control scheme is in use-->
+  <node name="control_node" pkg="weeble_bot" type="gamepad_control.py" />
+
+  <!-- node for doing the actual gpio driving of the motors. -->
+  <node name="motor_node" pkg="motors" type="motor_node.py" />
+
+  <!-- New Group called "robot_estimate" to estimate the robot's location based only on sensor data. --> 
+  <!-- In this group, launch the "dead_reckoning" node and another "animator" to draw where the robot thinks it is. -->
+  <group ns="robot_estimate">
+    <!-- node to read and publish the encoders -->
+    <node pkg="weeble_bot" name="wheel_encoder_node" type="wheel_encoder_node.py"/>
+
+    <!-- first a "dead reckoning" node -->
+    <node pkg="mobrob" name="dead_reckoning" type="dead_reckoning.py" />
+
+    <!-- then an "animator" node, but remapped to make it subscribe to "/robot_pose_estimated" instead of "/robot_pose_simulated"  -->
+    <node pkg="mobrob" name="dead_reckoning_animator" type="mobile_robot_animator.py" >
+        <remap from="/robot_pose_simulated" to="/robot_pose_estimated"/>    
+    </node>
+  </group>
+</launch>

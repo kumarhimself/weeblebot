@@ -4,6 +4,7 @@ import numpy as np
 import rospy
 import encoders
 from motors.dual_tb9051ftg_rpi import motors
+import traceback
 
 import encoders_and_motors as encmot
 
@@ -123,7 +124,7 @@ def encoder_update(quad_encoders, mot_controllers):
         robot_wheel_angles_message.ang_left = quad_encoders[0].radians
         robot_wheel_displacements_message.d_left = quad_encoders[0].meters
         
-        #processing for left encoder.
+        #processing for right encoder.
         t1 = rospy.get_rostime()   # or time.time()
         dt1 = (t1-t1_previous).to_sec()
         t1_previous = t1 # store it for the next round

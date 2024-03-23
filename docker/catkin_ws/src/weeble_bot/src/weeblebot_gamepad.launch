@@ -11,19 +11,4 @@
   <!-- node for doing the actual gpio driving of the motors. currently runs them open-loop-->
   <node name="motor_node" pkg="motors" type="motor_node.py" />
 
-  <!-- node to read and publish the encoders. wheel speed pid functionality isn't being used right now, but might be in the future-->
-  <node pkg="mobrob" name="wheel_control_node" type="wheel_control_node.py"/>
-
-  <!-- New Group called "robot_estimate" to estimate the robot's location based only on sensor data. --> 
-  <!-- In this group, launch the "dead_reckoning" node and another "animator" to draw where the robot thinks it is. -->
-  <group ns="robot_estimate">
-
-    <!-- first a "dead reckoning" node -->
-    <node pkg="mobrob" name="dead_reckoning" type="dead_reckoning.py" />
-
-    <!-- then an "animator" node, but remapped to make it subscribe to "/robot_pose_estimated" instead of "/robot_pose_simulated"  -->
-    <node pkg="mobrob" name="dead_reckoning_animator" type="mobile_robot_animator.py" >
-        <remap from="/robot_pose_simulated" to="/robot_pose_estimated"/>    
-    </node>
-  </group>
 </launch>
