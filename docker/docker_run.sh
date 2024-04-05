@@ -1,3 +1,6 @@
+cd catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder
+sudo make load
+cd ../../../..
 xhost +local:root
 sudo docker run --rm \
 	--privileged \
