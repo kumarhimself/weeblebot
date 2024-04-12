@@ -8,7 +8,6 @@ import traceback
 import encoders_and_motors as encmot
 
 # IMPORT the custom messages:
-from weeble_bot_util.msg import SensorsRaw, WheelAngles, WheelDisplacements
 from mobrob_util.msg import ME439WheelAngles, ME439WheelDisplacements
 
 #==============================================================================
