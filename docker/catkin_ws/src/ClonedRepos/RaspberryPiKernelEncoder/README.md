@@ -22,9 +22,9 @@ Electrical Hookup:
 - Pin numbers Encoder 1
 	- A - 17, B - 27
 - Encoder 2
-	- A - 5, B - 6
-- Encoder 3
 	- A - 23, B - 24
+- Encoder 3
+	- A - 5, B - 6
 - Encoder 4
 	- A - 16, B - 26
 
