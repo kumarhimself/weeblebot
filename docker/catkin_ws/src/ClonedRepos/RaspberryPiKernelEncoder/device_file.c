@@ -25,10 +25,10 @@
 #if QUADRATURE
 #define PIN_1A 17
 #define PIN_1B 27
-#define PIN_2A 23
-#define PIN_2B 24
-#define PIN_3A 5
-#define PIN_3B 6
+#define PIN_2A 5
+#define PIN_2B 6
+#define PIN_3A 23
+#define PIN_3B 24
 #define PIN_4A 16
 #define PIN_4B 26
 
