@@ -1,4 +1,5 @@
 cd catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder
+sudo make unload
 sudo make load
 cd ../../../..
 xhost +local:root

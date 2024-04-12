@@ -1,1 +1,1 @@
-cmd_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/modules.order := {   echo /home/pi/ClonedRepos/RaspberryPiKernelEncoder/encoder-module.ko; :; } | awk '!x[$$0]++' - > /home/pi/ClonedRepos/RaspberryPiKernelEncoder/modules.order
+cmd_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/modules.order := {   echo /home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/encoder-module.ko; :; } > /home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/modules.order

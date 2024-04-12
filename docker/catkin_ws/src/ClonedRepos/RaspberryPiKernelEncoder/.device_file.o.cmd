@@ -1,1012 +1,1334 @@
-cmd_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o := gcc -Wp,-MMD,/home/pi/ClonedRepos/RaspberryPiKernelEncoder/.device_file.o.d  -nostdinc -isystem /usr/lib/gcc/arm-linux-gnueabihf/8/include -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -fmacro-prefix-map=./= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -marm -Wa,-mno-warn-deprecated -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"device_file"' -DKBUILD_MODNAME='"encoder_module"' -c -o /home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o /home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.c
+cmd_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o :=  gcc-12 -Wp,-MMD,/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/.device_file.o.d -nostdinc -I/usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include -I./arch/arm64/include/generated -I/usr/src/linux-headers-6.1.0-rpi8-common-rpi/include -I./include -I/usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I/usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi -I./include/generated/uapi -include /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler-version.h -include /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kconfig.h -include /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -DCC_USING_PATCHABLE_FUNCTION_ENTRY -DKASAN_SHADOW_SCALE_SHIFT= -fmacro-prefix-map=/usr/src/linux-headers-6.1.0-rpi8-common-rpi/= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu11 -mgeneral-regs-only -DCONFIG_CC_HAS_K_CONSTRAINT=1 -Wno-psabi -mabi=lp64 -fno-asynchronous-unwind-tables -fno-unwind-tables -mbranch-protection=pac-ret+leaf -Wa,-march=armv8.5-a -DARM64_ASM_ARCH='"armv8.5-a"' -DKASAN_SHADOW_SCALE_SHIFT= -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-dangling-pointer -fno-omit-frame-pointer -fno-optimize-sibling-calls -ftrivial-auto-var-init=zero -fno-stack-clash-protection -fpatchable-function-entry=2 -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-stringop-truncation -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-array-bounds -Wno-alloc-size-larger-than -Wimplicit-fallthrough=5 -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -mstack-protector-guard=sysreg -mstack-protector-guard-reg=sp_el0 -mstack-protector-guard-offset=1432  -DMODULE  -DKBUILD_BASENAME='"device_file"' -DKBUILD_MODNAME='"encoder_module"' -D__KBUILD_MODNAME=kmod_encoder_module -c -o /home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o /home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.c  
 
-source_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o := /home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.c
+source_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o := /home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.c
 
-deps_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o := \
-  include/linux/kconfig.h \
-    $(wildcard include/config/cc/version/text.h) \
-    $(wildcard include/config/cpu/big/endian.h) \
-    $(wildcard include/config/booger.h) \
-    $(wildcard include/config/foo.h) \
-  include/linux/compiler_types.h \
-    $(wildcard include/config/have/arch/compiler/h.h) \
-    $(wildcard include/config/enable/must/check.h) \
-    $(wildcard include/config/cc/has/asm/inline.h) \
-  include/linux/compiler_attributes.h \
-  include/linux/compiler-gcc.h \
-    $(wildcard include/config/arm64.h) \
-    $(wildcard include/config/retpoline.h) \
-    $(wildcard include/config/arch/use/builtin/bswap.h) \
-    $(wildcard include/config/kcov.h) \
-  include/linux/fs.h \
-    $(wildcard include/config/read/only/thp/for/fs.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/security.h) \
-    $(wildcard include/config/cgroup/writeback.h) \
-    $(wildcard include/config/ima.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/fs/encryption.h) \
-    $(wildcard include/config/fs/verity.h) \
-    $(wildcard include/config/preemption.h) \
-    $(wildcard include/config/epoll.h) \
-    $(wildcard include/config/unicode.h) \
-    $(wildcard include/config/compat.h) \
-    $(wildcard include/config/mmu.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/fs/dax.h) \
-    $(wildcard include/config/mandatory/file/locking.h) \
-    $(wildcard include/config/block.h) \
-    $(wildcard include/config/debug/lock/alloc.h) \
-    $(wildcard include/config/migration.h) \
-  include/linux/linkage.h \
-    $(wildcard include/config/arch/use/sym/annotations.h) \
-  include/linux/compiler_types.h \
-  include/linux/stringify.h \
-  include/linux/export.h \
-    $(wildcard include/config/modversions.h) \
-    $(wildcard include/config/module/rel/crcs.h) \
-    $(wildcard include/config/have/arch/prel32/relocations.h) \
-    $(wildcard include/config/modules.h) \
-    $(wildcard include/config/trim/unused/ksyms.h) \
-    $(wildcard include/config/unused/symbols.h) \
-  arch/arm/include/asm/linkage.h \
-  include/linux/wait_bit.h \
-  include/linux/wait.h \
-    $(wildcard include/config/lockdep.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
-  include/linux/types.h \
-    $(wildcard include/config/have/uid16.h) \
-    $(wildcard include/config/uid16.h) \
-    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
-    $(wildcard include/config/phys/addr/t/64bit.h) \
-    $(wildcard include/config/64bit.h) \
-  include/uapi/linux/types.h \
-  arch/arm/include/uapi/asm/types.h \
-  include/asm-generic/int-ll64.h \
-  include/uapi/asm-generic/int-ll64.h \
-  arch/arm/include/generated/uapi/asm/bitsperlong.h \
-  include/asm-generic/bitsperlong.h \
-  include/uapi/asm-generic/bitsperlong.h \
-  include/uapi/linux/posix_types.h \
-  include/linux/stddef.h \
-  include/uapi/linux/stddef.h \
-  arch/arm/include/uapi/asm/posix_types.h \
-  include/uapi/asm-generic/posix_types.h \
-  include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-    $(wildcard include/config/page/poisoning/zero.h) \
-  include/linux/const.h \
-  include/vdso/const.h \
-  include/uapi/linux/const.h \
-  include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/atomic/sleep.h) \
-    $(wildcard include/config/preempt/rt.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/panic/timeout.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-  include/linux/limits.h \
-  include/uapi/linux/limits.h \
-  include/vdso/limits.h \
-  include/linux/compiler.h \
-    $(wildcard include/config/trace/branch/profiling.h) \
-    $(wildcard include/config/profile/all/branches.h) \
-    $(wildcard include/config/stack/validation.h) \
-  arch/arm/include/generated/asm/rwonce.h \
-  include/asm-generic/rwonce.h \
-  include/linux/kasan-checks.h \
-    $(wildcard include/config/kasan.h) \
-  include/linux/kcsan-checks.h \
-    $(wildcard include/config/kcsan.h) \
-    $(wildcard include/config/kcsan/ignore/atomics.h) \
-  include/linux/bitops.h \
-  include/linux/bits.h \
-  include/vdso/bits.h \
-  include/linux/build_bug.h \
-  arch/arm/include/asm/bitops.h \
-  include/linux/irqflags.h \
-    $(wildcard include/config/trace/irqflags.h) \
-    $(wildcard include/config/irqsoff/tracer.h) \
-    $(wildcard include/config/preempt/tracer.h) \
-    $(wildcard include/config/trace/irqflags/support.h) \
-  include/linux/typecheck.h \
-  arch/arm/include/asm/irqflags.h \
-    $(wildcard include/config/cpu/v7m.h) \
-  arch/arm/include/asm/ptrace.h \
-    $(wildcard include/config/arm/thumb.h) \
-    $(wildcard include/config/thumb2/kernel.h) \
-  arch/arm/include/uapi/asm/ptrace.h \
-    $(wildcard include/config/cpu/endian/be8.h) \
-  arch/arm/include/asm/hwcap.h \
-  arch/arm/include/uapi/asm/hwcap.h \
-  include/asm-generic/irqflags.h \
-  arch/arm/include/asm/percpu.h \
-    $(wildcard include/config/cpu/v6.h) \
-  include/asm-generic/percpu.h \
-    $(wildcard include/config/debug/preempt.h) \
-    $(wildcard include/config/have/setup/per/cpu/area.h) \
-  include/linux/threads.h \
-    $(wildcard include/config/nr/cpus.h) \
-    $(wildcard include/config/base/small.h) \
-  include/linux/percpu-defs.h \
-    $(wildcard include/config/debug/force/weak/per/cpu.h) \
-    $(wildcard include/config/amd/mem/encrypt.h) \
-  arch/arm/include/asm/barrier.h \
-    $(wildcard include/config/cpu/32v6k.h) \
-    $(wildcard include/config/cpu/xsc3.h) \
-    $(wildcard include/config/cpu/fa526.h) \
-    $(wildcard include/config/arm/heavy/mb.h) \
-    $(wildcard include/config/arm/dma/mem/bufferable.h) \
-    $(wildcard include/config/cpu/spectre.h) \
-  include/asm-generic/barrier.h \
-  include/asm-generic/bitops/non-atomic.h \
-  include/asm-generic/bitops/builtin-__fls.h \
-  include/asm-generic/bitops/builtin-__ffs.h \
-  include/asm-generic/bitops/builtin-fls.h \
-  include/asm-generic/bitops/builtin-ffs.h \
-  include/asm-generic/bitops/ffz.h \
-  include/asm-generic/bitops/fls64.h \
-  include/asm-generic/bitops/sched.h \
-  include/asm-generic/bitops/hweight.h \
-  include/asm-generic/bitops/arch_hweight.h \
-  include/asm-generic/bitops/const_hweight.h \
-  include/asm-generic/bitops/lock.h \
-  include/linux/atomic.h \
-  arch/arm/include/asm/atomic.h \
-    $(wildcard include/config/generic/atomic64.h) \
-    $(wildcard include/config/arm/lpae.h) \
-  include/linux/prefetch.h \
-  arch/arm/include/asm/processor.h \
-    $(wildcard include/config/have/hw/breakpoint.h) \
-    $(wildcard include/config/binfmt/elf/fdpic.h) \
-  arch/arm/include/asm/hw_breakpoint.h \
-  arch/arm/include/asm/unified.h \
-  arch/arm/include/asm/vdso/processor.h \
-    $(wildcard include/config/arm/errata/754327.h) \
-  arch/arm/include/asm/cache.h \
-    $(wildcard include/config/arm/l1/cache/shift.h) \
-    $(wildcard include/config/aeabi.h) \
-  arch/arm/include/asm/cmpxchg.h \
-    $(wildcard include/config/cpu/sa1100.h) \
-    $(wildcard include/config/cpu/sa110.h) \
-  include/asm-generic/cmpxchg-local.h \
-  include/linux/atomic-fallback.h \
-  include/asm-generic/atomic-long.h \
-  include/asm-generic/bitops/find.h \
-    $(wildcard include/config/generic/find/first/bit.h) \
-  include/asm-generic/bitops/le.h \
-  arch/arm/include/uapi/asm/byteorder.h \
-  include/linux/byteorder/little_endian.h \
-  include/uapi/linux/byteorder/little_endian.h \
-  include/linux/swab.h \
-  include/uapi/linux/swab.h \
-  arch/arm/include/asm/swab.h \
-  arch/arm/include/uapi/asm/swab.h \
-  include/linux/byteorder/generic.h \
-  include/asm-generic/bitops/ext2-atomic-setbit.h \
-  include/linux/log2.h \
-    $(wildcard include/config/arch/has/ilog2/u32.h) \
-    $(wildcard include/config/arch/has/ilog2/u64.h) \
-  include/linux/minmax.h \
-  include/linux/printk.h \
-    $(wildcard include/config/message/loglevel/default.h) \
-    $(wildcard include/config/console/loglevel/default.h) \
-    $(wildcard include/config/console/loglevel/quiet.h) \
-    $(wildcard include/config/early/printk.h) \
-    $(wildcard include/config/printk/nmi.h) \
-    $(wildcard include/config/printk.h) \
-    $(wildcard include/config/dynamic/debug.h) \
-    $(wildcard include/config/dynamic/debug/core.h) \
-  include/linux/init.h \
-    $(wildcard include/config/strict/kernel/rwx.h) \
-    $(wildcard include/config/strict/module/rwx.h) \
-  include/linux/kern_levels.h \
-  include/linux/cache.h \
-    $(wildcard include/config/arch/has/cache/line/size.h) \
-  include/uapi/linux/kernel.h \
-  include/uapi/linux/sysinfo.h \
-  include/linux/ratelimit_types.h \
-  include/uapi/linux/param.h \
-  arch/arm/include/generated/uapi/asm/param.h \
-  include/asm-generic/param.h \
-    $(wildcard include/config/hz.h) \
-  include/uapi/asm-generic/param.h \
-  include/linux/spinlock_types.h \
-    $(wildcard include/config/debug/spinlock.h) \
-  arch/arm/include/asm/spinlock_types.h \
-  include/linux/lockdep_types.h \
-    $(wildcard include/config/prove/raw/lock/nesting.h) \
-    $(wildcard include/config/preempt/lock.h) \
-    $(wildcard include/config/lock/stat.h) \
-  include/linux/rwlock_types.h \
-  arch/arm/include/asm/div64.h \
-  arch/arm/include/asm/compiler.h \
-  include/asm-generic/div64.h \
-  include/linux/spinlock.h \
-  include/linux/preempt.h \
-    $(wildcard include/config/preempt/count.h) \
-    $(wildcard include/config/trace/preempt/toggle.h) \
-    $(wildcard include/config/preempt/notifiers.h) \
-  arch/arm/include/generated/asm/preempt.h \
-  include/asm-generic/preempt.h \
-  include/linux/thread_info.h \
-    $(wildcard include/config/thread/info/in/task.h) \
-    $(wildcard include/config/have/arch/within/stack/frames.h) \
-    $(wildcard include/config/hardened/usercopy.h) \
-  include/linux/bug.h \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/bug/on/data/corruption.h) \
-  arch/arm/include/asm/bug.h \
-    $(wildcard include/config/debug/bugverbose.h) \
-  arch/arm/include/asm/opcodes.h \
-    $(wildcard include/config/cpu/endian/be32.h) \
-  include/asm-generic/bug.h \
-    $(wildcard include/config/bug.h) \
-    $(wildcard include/config/generic/bug/relative/pointers.h) \
-  include/linux/instrumentation.h \
-    $(wildcard include/config/debug/entry.h) \
-  include/linux/restart_block.h \
-  include/linux/time64.h \
-  include/linux/math64.h \
-    $(wildcard include/config/arch/supports/int128.h) \
-  include/vdso/math64.h \
-  include/vdso/time64.h \
-  include/uapi/linux/time.h \
-  include/uapi/linux/time_types.h \
-  include/linux/errno.h \
-  include/uapi/linux/errno.h \
-  arch/arm/include/generated/uapi/asm/errno.h \
-  include/uapi/asm-generic/errno.h \
-  include/uapi/asm-generic/errno-base.h \
-  arch/arm/include/asm/thread_info.h \
-    $(wildcard include/config/stackprotector/per/task.h) \
-    $(wildcard include/config/crunch.h) \
-    $(wildcard include/config/arm/thumbee.h) \
-  arch/arm/include/asm/fpstate.h \
-    $(wildcard include/config/vfpv3.h) \
-    $(wildcard include/config/iwmmxt.h) \
-  arch/arm/include/asm/page.h \
-    $(wildcard include/config/cpu/copy/v4wt.h) \
-    $(wildcard include/config/cpu/copy/v4wb.h) \
-    $(wildcard include/config/cpu/copy/feroceon.h) \
-    $(wildcard include/config/cpu/copy/fa.h) \
-    $(wildcard include/config/cpu/xscale.h) \
-    $(wildcard include/config/cpu/copy/v6.h) \
-    $(wildcard include/config/kuser/helpers.h) \
-    $(wildcard include/config/have/arch/pfn/valid.h) \
-  arch/arm/include/asm/glue.h \
-  arch/arm/include/asm/pgtable-2level-types.h \
-  arch/arm/include/asm/memory.h \
-    $(wildcard include/config/need/mach/memory/h.h) \
-    $(wildcard include/config/page/offset.h) \
-    $(wildcard include/config/highmem.h) \
-    $(wildcard include/config/dram/base.h) \
-    $(wildcard include/config/dram/size.h) \
-    $(wildcard include/config/xip/kernel.h) \
-    $(wildcard include/config/have/tcm.h) \
-    $(wildcard include/config/arm/patch/phys/virt.h) \
-    $(wildcard include/config/phys/offset.h) \
-    $(wildcard include/config/xip/phys/addr.h) \
-    $(wildcard include/config/debug/virtual.h) \
-  include/linux/sizes.h \
-  include/asm-generic/memory_model.h \
-    $(wildcard include/config/flatmem.h) \
-    $(wildcard include/config/discontigmem.h) \
-    $(wildcard include/config/sparsemem/vmemmap.h) \
-    $(wildcard include/config/sparsemem.h) \
-  include/linux/pfn.h \
-  include/asm-generic/getorder.h \
-  include/linux/bottom_half.h \
-  include/linux/lockdep.h \
-    $(wildcard include/config/debug/locking/api/selftests.h) \
-  include/linux/smp.h \
-    $(wildcard include/config/up/late/init.h) \
-  include/linux/cpumask.h \
-    $(wildcard include/config/cpumask/offstack.h) \
-    $(wildcard include/config/hotplug/cpu.h) \
-    $(wildcard include/config/debug/per/cpu/maps.h) \
-  include/linux/bitmap.h \
-  include/linux/string.h \
-    $(wildcard include/config/binary/printf.h) \
-    $(wildcard include/config/fortify/source.h) \
-  include/uapi/linux/string.h \
-  arch/arm/include/asm/string.h \
-    $(wildcard include/config/bcm2835/fast/memcpy.h) \
-  include/linux/smp_types.h \
-  include/linux/llist.h \
-    $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
-  arch/arm/include/asm/smp.h \
-  arch/arm/include/generated/asm/mmiowb.h \
-  include/asm-generic/mmiowb.h \
-    $(wildcard include/config/mmiowb.h) \
-  arch/arm/include/asm/spinlock.h \
-  include/linux/rwlock.h \
-    $(wildcard include/config/preempt.h) \
-  include/linux/spinlock_api_smp.h \
-    $(wildcard include/config/inline/spin/lock.h) \
-    $(wildcard include/config/inline/spin/lock/bh.h) \
-    $(wildcard include/config/inline/spin/lock/irq.h) \
-    $(wildcard include/config/inline/spin/lock/irqsave.h) \
-    $(wildcard include/config/inline/spin/trylock.h) \
-    $(wildcard include/config/inline/spin/trylock/bh.h) \
-    $(wildcard include/config/uninline/spin/unlock.h) \
-    $(wildcard include/config/inline/spin/unlock/bh.h) \
-    $(wildcard include/config/inline/spin/unlock/irq.h) \
-    $(wildcard include/config/inline/spin/unlock/irqrestore.h) \
-    $(wildcard include/config/generic/lockbreak.h) \
-  include/linux/rwlock_api_smp.h \
-    $(wildcard include/config/inline/read/lock.h) \
-    $(wildcard include/config/inline/write/lock.h) \
-    $(wildcard include/config/inline/read/lock/bh.h) \
-    $(wildcard include/config/inline/write/lock/bh.h) \
-    $(wildcard include/config/inline/read/lock/irq.h) \
-    $(wildcard include/config/inline/write/lock/irq.h) \
-    $(wildcard include/config/inline/read/lock/irqsave.h) \
-    $(wildcard include/config/inline/write/lock/irqsave.h) \
-    $(wildcard include/config/inline/read/trylock.h) \
-    $(wildcard include/config/inline/write/trylock.h) \
-    $(wildcard include/config/inline/read/unlock.h) \
-    $(wildcard include/config/inline/write/unlock.h) \
-    $(wildcard include/config/inline/read/unlock/bh.h) \
-    $(wildcard include/config/inline/write/unlock/bh.h) \
-    $(wildcard include/config/inline/read/unlock/irq.h) \
-    $(wildcard include/config/inline/write/unlock/irq.h) \
-    $(wildcard include/config/inline/read/unlock/irqrestore.h) \
-    $(wildcard include/config/inline/write/unlock/irqrestore.h) \
-  arch/arm/include/generated/asm/current.h \
-  include/asm-generic/current.h \
-  include/uapi/linux/wait.h \
-  include/linux/kdev_t.h \
-  include/uapi/linux/kdev_t.h \
-  include/linux/dcache.h \
-  include/linux/rculist.h \
-    $(wildcard include/config/prove/rcu/list.h) \
-  include/linux/rcupdate.h \
-    $(wildcard include/config/preempt/rcu.h) \
-    $(wildcard include/config/tiny/rcu.h) \
-    $(wildcard include/config/tasks/rcu/generic.h) \
-    $(wildcard include/config/rcu/stall/common.h) \
-    $(wildcard include/config/no/hz/full.h) \
-    $(wildcard include/config/rcu/nocb/cpu.h) \
-    $(wildcard include/config/tasks/rcu.h) \
-    $(wildcard include/config/tasks/trace/rcu.h) \
-    $(wildcard include/config/tasks/rude/rcu.h) \
-    $(wildcard include/config/tree/rcu.h) \
-    $(wildcard include/config/debug/objects/rcu/head.h) \
-    $(wildcard include/config/prove/rcu.h) \
-    $(wildcard include/config/rcu/boost.h) \
-    $(wildcard include/config/arch/weak/release/acquire.h) \
-  include/linux/rcutree.h \
-  include/linux/rculist_bl.h \
-  include/linux/list_bl.h \
-  include/linux/bit_spinlock.h \
-  include/linux/seqlock.h \
-  include/linux/mutex.h \
-    $(wildcard include/config/mutex/spin/on/owner.h) \
-    $(wildcard include/config/debug/mutexes.h) \
-  include/linux/osq_lock.h \
-  include/linux/debug_locks.h \
-  include/linux/ww_mutex.h \
-    $(wildcard include/config/debug/ww/mutex/slowpath.h) \
-  include/linux/lockref.h \
-    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+deps_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o := \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler-version.h \
+    $(wildcard include/config/CC_VERSION_TEXT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kconfig.h \
+    $(wildcard include/config/CPU_BIG_ENDIAN) \
+    $(wildcard include/config/BOOGER) \
+    $(wildcard include/config/FOO) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler_types.h \
+    $(wildcard include/config/DEBUG_INFO_BTF) \
+    $(wildcard include/config/PAHOLE_HAS_BTF_TAG) \
+    $(wildcard include/config/HAVE_ARCH_COMPILER_H) \
+    $(wildcard include/config/CC_HAS_ASM_INLINE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler_attributes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler-gcc.h \
+    $(wildcard include/config/RETPOLINE) \
+    $(wildcard include/config/ARCH_USE_BUILTIN_BSWAP) \
+    $(wildcard include/config/SHADOW_CALL_STACK) \
+    $(wildcard include/config/KCOV) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/compiler.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/fs.h \
+    $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
+    $(wildcard include/config/SMP) \
+    $(wildcard include/config/FS_POSIX_ACL) \
+    $(wildcard include/config/SECURITY) \
+    $(wildcard include/config/CGROUP_WRITEBACK) \
+    $(wildcard include/config/IMA) \
+    $(wildcard include/config/FILE_LOCKING) \
+    $(wildcard include/config/FSNOTIFY) \
+    $(wildcard include/config/FS_ENCRYPTION) \
+    $(wildcard include/config/FS_VERITY) \
+    $(wildcard include/config/PREEMPTION) \
+    $(wildcard include/config/EPOLL) \
+    $(wildcard include/config/UNICODE) \
+    $(wildcard include/config/COMPAT) \
+    $(wildcard include/config/MMU) \
+    $(wildcard include/config/QUOTA) \
+    $(wildcard include/config/FS_DAX) \
+    $(wildcard include/config/BLOCK) \
+    $(wildcard include/config/DEBUG_LOCK_ALLOC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/linkage.h \
+    $(wildcard include/config/ARCH_USE_SYM_ANNOTATIONS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stringify.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/export.h \
+    $(wildcard include/config/MODVERSIONS) \
+    $(wildcard include/config/HAVE_ARCH_PREL32_RELOCATIONS) \
+    $(wildcard include/config/MODULES) \
+    $(wildcard include/config/TRIM_UNUSED_KSYMS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compiler.h \
+    $(wildcard include/config/TRACE_BRANCH_PROFILING) \
+    $(wildcard include/config/PROFILE_ALL_BRANCHES) \
+    $(wildcard include/config/OBJTOOL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/rwonce.h \
+    $(wildcard include/config/LTO) \
+    $(wildcard include/config/AS_HAS_LDAPR) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/rwonce.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kasan-checks.h \
+    $(wildcard include/config/KASAN_GENERIC) \
+    $(wildcard include/config/KASAN_SW_TAGS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/types.h \
+    $(wildcard include/config/HAVE_UID16) \
+    $(wildcard include/config/UID16) \
+    $(wildcard include/config/ARCH_DMA_ADDR_T_64BIT) \
+    $(wildcard include/config/PHYS_ADDR_T_64BIT) \
+    $(wildcard include/config/64BIT) \
+    $(wildcard include/config/ARCH_32BIT_USTAT_F_TINODE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/types.h \
+  arch/arm64/include/generated/uapi/asm/types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/int-ll64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/int-ll64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/bitsperlong.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitsperlong.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/bitsperlong.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/posix_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stddef.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/stddef.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/posix_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/posix_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kcsan-checks.h \
+    $(wildcard include/config/KCSAN) \
+    $(wildcard include/config/KCSAN_WEAK_MEMORY) \
+    $(wildcard include/config/KCSAN_IGNORE_ATOMICS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/linkage.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/wait_bit.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/wait.h \
+    $(wildcard include/config/LOCKDEP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/list.h \
+    $(wildcard include/config/DEBUG_LIST) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/container_of.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/build_bug.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/err.h \
+  arch/arm64/include/generated/uapi/asm/errno.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/errno.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/errno-base.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/poison.h \
+    $(wildcard include/config/ILLEGAL_POINTER_VALUE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/const.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/const.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/const.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/barrier.h \
+    $(wildcard include/config/ARM64_PSEUDO_NMI) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/barrier.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/spinlock.h \
+    $(wildcard include/config/DEBUG_SPINLOCK) \
+    $(wildcard include/config/PREEMPT_RT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/typecheck.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/preempt.h \
+    $(wildcard include/config/PREEMPT_COUNT) \
+    $(wildcard include/config/DEBUG_PREEMPT) \
+    $(wildcard include/config/TRACE_PREEMPT_TOGGLE) \
+    $(wildcard include/config/PREEMPT_NOTIFIERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/preempt.h \
+    $(wildcard include/config/PREEMPT_DYNAMIC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/jump_label.h \
+    $(wildcard include/config/JUMP_LABEL) \
+    $(wildcard include/config/HAVE_ARCH_JUMP_LABEL_RELATIVE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/jump_label.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/insn.h \
+    $(wildcard include/config/ARM64_LSE_ATOMICS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/insn-def.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/brk-imm.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/thread_info.h \
+    $(wildcard include/config/THREAD_INFO_IN_TASK) \
+    $(wildcard include/config/GENERIC_ENTRY) \
+    $(wildcard include/config/HAVE_ARCH_WITHIN_STACK_FRAMES) \
+    $(wildcard include/config/HARDENED_USERCOPY) \
+    $(wildcard include/config/BUG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/limits.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/limits.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/limits.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bug.h \
+    $(wildcard include/config/GENERIC_BUG) \
+    $(wildcard include/config/BUG_ON_DATA_CORRUPTION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/bug.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/asm-bug.h \
+    $(wildcard include/config/DEBUG_BUGVERBOSE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bug.h \
+    $(wildcard include/config/GENERIC_BUG_RELATIVE_POINTERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/instrumentation.h \
+    $(wildcard include/config/NOINSTR_VALIDATION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/once_lite.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/panic.h \
+    $(wildcard include/config/PANIC_TIMEOUT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/printk.h \
+    $(wildcard include/config/MESSAGE_LOGLEVEL_DEFAULT) \
+    $(wildcard include/config/CONSOLE_LOGLEVEL_DEFAULT) \
+    $(wildcard include/config/CONSOLE_LOGLEVEL_QUIET) \
+    $(wildcard include/config/EARLY_PRINTK) \
+    $(wildcard include/config/PRINTK) \
+    $(wildcard include/config/PRINTK_INDEX) \
+    $(wildcard include/config/DYNAMIC_DEBUG) \
+    $(wildcard include/config/DYNAMIC_DEBUG_CORE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stdarg.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/init.h \
+    $(wildcard include/config/STRICT_KERNEL_RWX) \
+    $(wildcard include/config/STRICT_MODULE_RWX) \
+    $(wildcard include/config/LTO_CLANG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kern_levels.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ratelimit_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bits.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/bits.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/param.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/param.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/param.h \
+    $(wildcard include/config/HZ) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/param.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/spinlock_types_raw.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/spinlock_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/qspinlock_types.h \
+    $(wildcard include/config/NR_CPUS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/qrwlock_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/byteorder.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/byteorder/little_endian.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/byteorder/little_endian.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/swab.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/swab.h \
+  arch/arm64/include/generated/uapi/asm/swab.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/swab.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/byteorder/generic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/lockdep_types.h \
+    $(wildcard include/config/PROVE_RAW_LOCK_NESTING) \
+    $(wildcard include/config/LOCK_STAT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/restart_block.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/time64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/math64.h \
+    $(wildcard include/config/ARCH_SUPPORTS_INT128) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/math.h \
+  arch/arm64/include/generated/asm/div64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/div64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/kernel.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/sysinfo.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/math64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/time64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/time.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/time_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/errno.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/errno.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/current.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bitops.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/generic-non-atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/bitops.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/builtin-__ffs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/builtin-ffs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/builtin-__fls.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/builtin-fls.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/ffz.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/fls64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/sched.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/hweight.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/arch_hweight.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/const_hweight.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/cmpxchg.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/lse.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/atomic_ll_sc.h \
+    $(wildcard include/config/CC_HAS_K_CONSTRAINT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/alternative.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/alternative-macros.h \
+  arch/arm64/include/generated/asm/cpucaps.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/atomic_lse.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/atomic/atomic-arch-fallback.h \
+    $(wildcard include/config/GENERIC_ATOMIC64) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/atomic/atomic-long.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/atomic/atomic-instrumented.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/instrumented.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kmsan-checks.h \
+    $(wildcard include/config/KMSAN) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/instrumented-atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/lock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/instrumented-lock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/non-atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/non-instrumented-non-atomic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/le.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/bitops/ext2-atomic-setbit.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/thread_info.h \
+    $(wildcard include/config/ARM64_SW_TTBR0_PAN) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/memory.h \
+    $(wildcard include/config/ARM64_VA_BITS) \
+    $(wildcard include/config/KASAN_SHADOW_OFFSET) \
+    $(wildcard include/config/KASAN) \
+    $(wildcard include/config/VMAP_STACK) \
+    $(wildcard include/config/ARM64_4K_PAGES) \
+    $(wildcard include/config/KASAN_HW_TAGS) \
+    $(wildcard include/config/DEBUG_VIRTUAL) \
+    $(wildcard include/config/ZONE_DMA) \
+    $(wildcard include/config/ZONE_DMA32) \
+    $(wildcard include/config/EFI) \
+    $(wildcard include/config/ARM_GIC_V3_ITS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sizes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/page-def.h \
+    $(wildcard include/config/ARM64_PAGE_SHIFT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mmdebug.h \
+    $(wildcard include/config/DEBUG_VM) \
+    $(wildcard include/config/DEBUG_VM_IRQSOFF) \
+    $(wildcard include/config/DEBUG_VM_PGFLAGS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/memory_model.h \
+    $(wildcard include/config/FLATMEM) \
+    $(wildcard include/config/SPARSEMEM_VMEMMAP) \
+    $(wildcard include/config/SPARSEMEM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pfn.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/stack_pointer.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqflags.h \
+    $(wildcard include/config/PROVE_LOCKING) \
+    $(wildcard include/config/TRACE_IRQFLAGS) \
+    $(wildcard include/config/IRQSOFF_TRACER) \
+    $(wildcard include/config/PREEMPT_TRACER) \
+    $(wildcard include/config/DEBUG_IRQFLAGS) \
+    $(wildcard include/config/TRACE_IRQFLAGS_SUPPORT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/irqflags.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/ptrace.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/cpufeature.h \
+    $(wildcard include/config/ARM64_PAN) \
+    $(wildcard include/config/ARM64_SVE) \
+    $(wildcard include/config/ARM64_SME) \
+    $(wildcard include/config/ARM64_CNP) \
+    $(wildcard include/config/ARM64_PTR_AUTH) \
+    $(wildcard include/config/ARM64_MTE) \
+    $(wildcard include/config/ARM64_DEBUG_PRIORITY_MASKING) \
+    $(wildcard include/config/ARM64_BTI) \
+    $(wildcard include/config/ARM64_TLB_RANGE) \
+    $(wildcard include/config/ARM64_PA_BITS) \
+    $(wildcard include/config/ARM64_HW_AFDBM) \
+    $(wildcard include/config/ARM64_AMU_EXTN) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/cputype.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/sysreg.h \
+    $(wildcard include/config/BROKEN_GAS_INST) \
+    $(wildcard include/config/ARM64_PA_BITS_52) \
+    $(wildcard include/config/ARM64_16K_PAGES) \
+    $(wildcard include/config/ARM64_64K_PAGES) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kasan-tags.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/gpr-num.h \
+  arch/arm64/include/generated/asm/sysreg-defs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bitfield.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/hwcap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/hwcap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/log2.h \
+    $(wildcard include/config/ARCH_HAS_ILOG2_U32) \
+    $(wildcard include/config/ARCH_HAS_ILOG2_U64) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kernel.h \
+    $(wildcard include/config/PREEMPT_VOLUNTARY_BUILD) \
+    $(wildcard include/config/HAVE_PREEMPT_DYNAMIC_CALL) \
+    $(wildcard include/config/HAVE_PREEMPT_DYNAMIC_KEY) \
+    $(wildcard include/config/PREEMPT_) \
+    $(wildcard include/config/DEBUG_ATOMIC_SLEEP) \
+    $(wildcard include/config/TRACING) \
+    $(wildcard include/config/FTRACE_MCOUNT_RECORD) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/align.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kstrtox.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/minmax.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/static_call_types.h \
+    $(wildcard include/config/HAVE_STATIC_CALL) \
+    $(wildcard include/config/HAVE_STATIC_CALL_INLINE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/instruction_pointer.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/ptrace.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/sve_context.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/percpu.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/percpu.h \
+    $(wildcard include/config/HAVE_SETUP_PER_CPU_AREA) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/threads.h \
+    $(wildcard include/config/BASE_SMALL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/percpu-defs.h \
+    $(wildcard include/config/DEBUG_FORCE_WEAK_PER_CPU) \
+    $(wildcard include/config/AMD_MEM_ENCRYPT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bottom_half.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/lockdep.h \
+    $(wildcard include/config/DEBUG_LOCKING_API_SELFTESTS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/smp.h \
+    $(wildcard include/config/UP_LATE_INIT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cpumask.h \
+    $(wildcard include/config/FORCE_NR_CPUS) \
+    $(wildcard include/config/HOTPLUG_CPU) \
+    $(wildcard include/config/DEBUG_PER_CPU_MAPS) \
+    $(wildcard include/config/CPUMASK_OFFSTACK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bitmap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/find.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/string.h \
+    $(wildcard include/config/BINARY_PRINTF) \
+    $(wildcard include/config/FORTIFY_SOURCE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/overflow.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/string.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/string.h \
+    $(wildcard include/config/ARCH_HAS_UACCESS_FLUSHCACHE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/gfp_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/numa.h \
+    $(wildcard include/config/NODES_SHIFT) \
+    $(wildcard include/config/NUMA_KEEP_MEMINFO) \
+    $(wildcard include/config/NUMA) \
+    $(wildcard include/config/HAVE_ARCH_NODE_DEV_GROUP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/smp_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/llist.h \
+    $(wildcard include/config/ARCH_HAVE_NMI_SAFE_CMPXCHG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/smp.h \
+    $(wildcard include/config/ARM64_ACPI_PARKING_PROTOCOL) \
+  arch/arm64/include/generated/asm/mmiowb.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/mmiowb.h \
+    $(wildcard include/config/MMIOWB) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/spinlock_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rwlock_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/spinlock.h \
+  arch/arm64/include/generated/asm/qspinlock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/qspinlock.h \
+  arch/arm64/include/generated/asm/qrwlock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/qrwlock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/processor.h \
+    $(wildcard include/config/KUSER_HELPERS) \
+    $(wildcard include/config/ARM64_FORCE_52BIT) \
+    $(wildcard include/config/HAVE_HW_BREAKPOINT) \
+    $(wildcard include/config/ARM64_PTR_AUTH_KERNEL) \
+    $(wildcard include/config/ARM64_TAGGED_ADDR_ABI) \
+    $(wildcard include/config/GCC_PLUGIN_STACKLEAK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cache.h \
+    $(wildcard include/config/ARCH_HAS_CACHE_LINE_SIZE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/cache.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kasan-enabled.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/static_key.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/mte-def.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/processor.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/vdso/processor.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/hw_breakpoint.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/virt.h \
+    $(wildcard include/config/KVM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/sections.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/sections.h \
+    $(wildcard include/config/HAVE_FUNCTION_DESCRIPTORS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/kasan.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/mte-kasan.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/pgtable-types.h \
+    $(wildcard include/config/PGTABLE_LEVELS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/pgtable-nopud.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/pgtable-nop4d.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/pgtable-hwdef.h \
+    $(wildcard include/config/ARM64_CONT_PTE_SHIFT) \
+    $(wildcard include/config/ARM64_CONT_PMD_SHIFT) \
+    $(wildcard include/config/ARM64_VA_BITS_52) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/pointer_auth.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/prctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/random.h \
+    $(wildcard include/config/VMGENID) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/once.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/random.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/ioctl.h \
+  arch/arm64/include/generated/uapi/asm/ioctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/ioctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/ioctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqnr.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/irqnr.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/prandom.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/percpu.h \
+    $(wildcard include/config/NEED_PER_CPU_EMBED_FIRST_CHUNK) \
+    $(wildcard include/config/NEED_PER_CPU_PAGE_FIRST_CHUNK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/archrandom.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/arm-smccc.h \
+    $(wildcard include/config/ARM64) \
+    $(wildcard include/config/HAVE_ARM_SMCCC) \
+    $(wildcard include/config/ARM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/spectre.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/fpsimd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/sigcontext.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rwlock.h \
+    $(wildcard include/config/PREEMPT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/spinlock_api_smp.h \
+    $(wildcard include/config/INLINE_SPIN_LOCK) \
+    $(wildcard include/config/INLINE_SPIN_LOCK_BH) \
+    $(wildcard include/config/INLINE_SPIN_LOCK_IRQ) \
+    $(wildcard include/config/INLINE_SPIN_LOCK_IRQSAVE) \
+    $(wildcard include/config/INLINE_SPIN_TRYLOCK) \
+    $(wildcard include/config/INLINE_SPIN_TRYLOCK_BH) \
+    $(wildcard include/config/UNINLINE_SPIN_UNLOCK) \
+    $(wildcard include/config/INLINE_SPIN_UNLOCK_BH) \
+    $(wildcard include/config/INLINE_SPIN_UNLOCK_IRQ) \
+    $(wildcard include/config/INLINE_SPIN_UNLOCK_IRQRESTORE) \
+    $(wildcard include/config/GENERIC_LOCKBREAK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rwlock_api_smp.h \
+    $(wildcard include/config/INLINE_READ_LOCK) \
+    $(wildcard include/config/INLINE_WRITE_LOCK) \
+    $(wildcard include/config/INLINE_READ_LOCK_BH) \
+    $(wildcard include/config/INLINE_WRITE_LOCK_BH) \
+    $(wildcard include/config/INLINE_READ_LOCK_IRQ) \
+    $(wildcard include/config/INLINE_WRITE_LOCK_IRQ) \
+    $(wildcard include/config/INLINE_READ_LOCK_IRQSAVE) \
+    $(wildcard include/config/INLINE_WRITE_LOCK_IRQSAVE) \
+    $(wildcard include/config/INLINE_READ_TRYLOCK) \
+    $(wildcard include/config/INLINE_WRITE_TRYLOCK) \
+    $(wildcard include/config/INLINE_READ_UNLOCK) \
+    $(wildcard include/config/INLINE_WRITE_UNLOCK) \
+    $(wildcard include/config/INLINE_READ_UNLOCK_BH) \
+    $(wildcard include/config/INLINE_WRITE_UNLOCK_BH) \
+    $(wildcard include/config/INLINE_READ_UNLOCK_IRQ) \
+    $(wildcard include/config/INLINE_WRITE_UNLOCK_IRQ) \
+    $(wildcard include/config/INLINE_READ_UNLOCK_IRQRESTORE) \
+    $(wildcard include/config/INLINE_WRITE_UNLOCK_IRQRESTORE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/wait.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kdev_t.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/kdev_t.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dcache.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rculist.h \
+    $(wildcard include/config/PROVE_RCU_LIST) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcupdate.h \
+    $(wildcard include/config/PREEMPT_RCU) \
+    $(wildcard include/config/TINY_RCU) \
+    $(wildcard include/config/RCU_STRICT_GRACE_PERIOD) \
+    $(wildcard include/config/TASKS_RCU_GENERIC) \
+    $(wildcard include/config/RCU_STALL_COMMON) \
+    $(wildcard include/config/NO_HZ_FULL) \
+    $(wildcard include/config/KVM_XFER_TO_GUEST_WORK) \
+    $(wildcard include/config/RCU_NOCB_CPU) \
+    $(wildcard include/config/TASKS_RCU) \
+    $(wildcard include/config/TASKS_TRACE_RCU) \
+    $(wildcard include/config/TASKS_RUDE_RCU) \
+    $(wildcard include/config/TREE_RCU) \
+    $(wildcard include/config/DEBUG_OBJECTS_RCU_HEAD) \
+    $(wildcard include/config/PROVE_RCU) \
+    $(wildcard include/config/ARCH_WEAK_RELEASE_ACQUIRE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/context_tracking_irq.h \
+    $(wildcard include/config/CONTEXT_TRACKING_IDLE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcutree.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rculist_bl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/list_bl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bit_spinlock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/seqlock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mutex.h \
+    $(wildcard include/config/MUTEX_SPIN_ON_OWNER) \
+    $(wildcard include/config/DEBUG_MUTEXES) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/osq_lock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/debug_locks.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/lockref.h \
+    $(wildcard include/config/ARCH_USE_CMPXCHG_LOCKREF) \
   include/generated/bounds.h \
-  include/linux/stringhash.h \
-    $(wildcard include/config/dcache/word/access.h) \
-  include/linux/hash.h \
-    $(wildcard include/config/have/arch/hash.h) \
-  include/linux/path.h \
-  include/linux/stat.h \
-  arch/arm/include/uapi/asm/stat.h \
-  include/uapi/linux/stat.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-    $(wildcard include/config/posix/timers.h) \
-  include/linux/time32.h \
-  include/linux/timex.h \
-  include/uapi/linux/timex.h \
-  arch/arm/include/asm/timex.h \
-  include/vdso/time32.h \
-  include/vdso/time.h \
-  include/linux/uidgid.h \
-    $(wildcard include/config/multiuser.h) \
-    $(wildcard include/config/user/ns.h) \
-  include/linux/highuid.h \
-  include/linux/list_lru.h \
-    $(wildcard include/config/memcg/kmem.h) \
-  include/linux/nodemask.h \
-    $(wildcard include/config/numa.h) \
-  include/linux/numa.h \
-    $(wildcard include/config/nodes/shift.h) \
-    $(wildcard include/config/numa/keep/meminfo.h) \
-  include/linux/shrinker.h \
-    $(wildcard include/config/memcg.h) \
-  include/linux/radix-tree.h \
-  include/linux/percpu.h \
-    $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
-    $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
-  include/linux/mmdebug.h \
-    $(wildcard include/config/debug/vm.h) \
-    $(wildcard include/config/debug/vm/pgflags.h) \
-  include/linux/xarray.h \
-    $(wildcard include/config/xarray/multi.h) \
-  include/linux/gfp.h \
-    $(wildcard include/config/zone/dma.h) \
-    $(wildcard include/config/zone/dma32.h) \
-    $(wildcard include/config/zone/device.h) \
-    $(wildcard include/config/pm/sleep.h) \
-    $(wildcard include/config/contig/alloc.h) \
-    $(wildcard include/config/cma.h) \
-  include/linux/mmzone.h \
-    $(wildcard include/config/force/max/zoneorder.h) \
-    $(wildcard include/config/memory/isolation.h) \
-    $(wildcard include/config/zsmalloc.h) \
-    $(wildcard include/config/shadow/call/stack.h) \
-    $(wildcard include/config/need/multiple/nodes.h) \
-    $(wildcard include/config/memory/hotplug.h) \
-    $(wildcard include/config/compaction.h) \
-    $(wildcard include/config/transparent/hugepage.h) \
-    $(wildcard include/config/flat/node/mem/map.h) \
-    $(wildcard include/config/page/extension.h) \
-    $(wildcard include/config/deferred/struct/page/init.h) \
-    $(wildcard include/config/have/memoryless/nodes.h) \
-    $(wildcard include/config/sparsemem/extreme.h) \
-    $(wildcard include/config/memory/hotremove.h) \
-    $(wildcard include/config/holes/in/zone.h) \
-    $(wildcard include/config/arch/has/holes/memorymodel.h) \
-  include/linux/pageblock-flags.h \
-    $(wildcard include/config/hugetlb/page.h) \
-    $(wildcard include/config/hugetlb/page/size/variable.h) \
-  include/linux/page-flags-layout.h \
-    $(wildcard include/config/numa/balancing.h) \
-    $(wildcard include/config/kasan/sw/tags.h) \
-  include/linux/mm_types.h \
-    $(wildcard include/config/have/aligned/struct/page.h) \
-    $(wildcard include/config/userfaultfd.h) \
-    $(wildcard include/config/swap.h) \
-    $(wildcard include/config/have/arch/compat/mmap/bases.h) \
-    $(wildcard include/config/membarrier.h) \
-    $(wildcard include/config/aio.h) \
-    $(wildcard include/config/mmu/notifier.h) \
-    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
-    $(wildcard include/config/iommu/support.h) \
-  include/linux/mm_types_task.h \
-    $(wildcard include/config/split/ptlock/cpus.h) \
-    $(wildcard include/config/arch/enable/split/pmd/ptlock.h) \
-  include/linux/auxvec.h \
-  include/uapi/linux/auxvec.h \
-  arch/arm/include/asm/auxvec.h \
-  arch/arm/include/uapi/asm/auxvec.h \
-  include/linux/rbtree.h \
-  include/linux/rwsem.h \
-    $(wildcard include/config/rwsem/spin/on/owner.h) \
-    $(wildcard include/config/debug/rwsems.h) \
-  include/linux/err.h \
-  include/linux/completion.h \
-  include/linux/swait.h \
-  include/linux/uprobes.h \
-    $(wildcard include/config/uprobes.h) \
-  include/linux/workqueue.h \
-    $(wildcard include/config/debug/objects/work.h) \
-    $(wildcard include/config/freezer.h) \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/wq/watchdog.h) \
-  include/linux/timer.h \
-    $(wildcard include/config/debug/objects/timers.h) \
-    $(wildcard include/config/no/hz/common.h) \
-  include/linux/ktime.h \
-  include/linux/jiffies.h \
-  include/vdso/jiffies.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stringhash.h \
+    $(wildcard include/config/DCACHE_WORD_ACCESS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/hash.h \
+    $(wildcard include/config/HAVE_ARCH_HASH) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/path.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/stat.h \
+  arch/arm64/include/generated/uapi/asm/stat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/stat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/time.h \
+    $(wildcard include/config/POSIX_TIMERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/time32.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/timex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/timex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/timex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/arch_timer.h \
+    $(wildcard include/config/ARM_ARCH_TIMER_OOL_WORKAROUND) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/clocksource/arm_arch_timer.h \
+    $(wildcard include/config/ARM_ARCH_TIMER) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/timecounter.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/timex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/time32.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/time.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/compat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/compat.h \
+    $(wildcard include/config/COMPAT_FOR_U64_ALIGNMENT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched.h \
+    $(wildcard include/config/VIRT_CPU_ACCOUNTING_NATIVE) \
+    $(wildcard include/config/SCHED_INFO) \
+    $(wildcard include/config/SCHEDSTATS) \
+    $(wildcard include/config/SCHED_CORE) \
+    $(wildcard include/config/FAIR_GROUP_SCHED) \
+    $(wildcard include/config/RT_GROUP_SCHED) \
+    $(wildcard include/config/RT_MUTEXES) \
+    $(wildcard include/config/UCLAMP_TASK) \
+    $(wildcard include/config/UCLAMP_BUCKETS_COUNT) \
+    $(wildcard include/config/KMAP_LOCAL) \
+    $(wildcard include/config/CGROUP_SCHED) \
+    $(wildcard include/config/BLK_DEV_IO_TRACE) \
+    $(wildcard include/config/PSI) \
+    $(wildcard include/config/MEMCG) \
+    $(wildcard include/config/LRU_GEN) \
+    $(wildcard include/config/COMPAT_BRK) \
+    $(wildcard include/config/CGROUPS) \
+    $(wildcard include/config/BLK_CGROUP) \
+    $(wildcard include/config/PAGE_OWNER) \
+    $(wildcard include/config/EVENTFD) \
+    $(wildcard include/config/IOMMU_SVA) \
+    $(wildcard include/config/CPU_SUP_INTEL) \
+    $(wildcard include/config/TASK_DELAY_ACCT) \
+    $(wildcard include/config/STACKPROTECTOR) \
+    $(wildcard include/config/ARCH_HAS_SCALED_CPUTIME) \
+    $(wildcard include/config/VIRT_CPU_ACCOUNTING_GEN) \
+    $(wildcard include/config/POSIX_CPUTIMERS) \
+    $(wildcard include/config/POSIX_CPU_TIMERS_TASK_WORK) \
+    $(wildcard include/config/KEYS) \
+    $(wildcard include/config/SYSVIPC) \
+    $(wildcard include/config/DETECT_HUNG_TASK) \
+    $(wildcard include/config/IO_URING) \
+    $(wildcard include/config/AUDIT) \
+    $(wildcard include/config/AUDITSYSCALL) \
+    $(wildcard include/config/UBSAN) \
+    $(wildcard include/config/UBSAN_TRAP) \
+    $(wildcard include/config/COMPACTION) \
+    $(wildcard include/config/TASK_XACCT) \
+    $(wildcard include/config/CPUSETS) \
+    $(wildcard include/config/X86_CPU_RESCTRL) \
+    $(wildcard include/config/FUTEX) \
+    $(wildcard include/config/PERF_EVENTS) \
+    $(wildcard include/config/NUMA_BALANCING) \
+    $(wildcard include/config/RSEQ) \
+    $(wildcard include/config/FAULT_INJECTION) \
+    $(wildcard include/config/LATENCYTOP) \
+    $(wildcard include/config/KUNIT) \
+    $(wildcard include/config/FUNCTION_GRAPH_TRACER) \
+    $(wildcard include/config/UPROBES) \
+    $(wildcard include/config/BCACHE) \
+    $(wildcard include/config/LIVEPATCH) \
+    $(wildcard include/config/BPF_SYSCALL) \
+    $(wildcard include/config/X86_MCE) \
+    $(wildcard include/config/KRETPROBES) \
+    $(wildcard include/config/RETHOOK) \
+    $(wildcard include/config/ARCH_HAS_PARANOID_L1D_FLUSH) \
+    $(wildcard include/config/RV) \
+    $(wildcard include/config/ARCH_TASK_STRUCT_ON_STACK) \
+    $(wildcard include/config/PREEMPT_NONE) \
+    $(wildcard include/config/PREEMPT_VOLUNTARY) \
+    $(wildcard include/config/DEBUG_RSEQ) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/sched.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pid.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/refcount.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sem.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/sem.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ipc.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/uidgid.h \
+    $(wildcard include/config/MULTIUSER) \
+    $(wildcard include/config/USER_NS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/highuid.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rhashtable-types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/workqueue.h \
+    $(wildcard include/config/DEBUG_OBJECTS_WORK) \
+    $(wildcard include/config/FREEZER) \
+    $(wildcard include/config/SYSFS) \
+    $(wildcard include/config/WQ_WATCHDOG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/timer.h \
+    $(wildcard include/config/DEBUG_OBJECTS_TIMERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ktime.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/jiffies.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/jiffies.h \
   include/generated/timeconst.h \
-  include/vdso/ktime.h \
-  include/linux/timekeeping.h \
-  include/linux/timekeeping32.h \
-  include/linux/debugobjects.h \
-    $(wildcard include/config/debug/objects.h) \
-    $(wildcard include/config/debug/objects/free.h) \
-  arch/arm/include/asm/mmu.h \
-    $(wildcard include/config/cpu/has/asid.h) \
-    $(wildcard include/config/vdso.h) \
-  include/linux/page-flags.h \
-    $(wildcard include/config/arch/uses/pg/uncached.h) \
-    $(wildcard include/config/memory/failure.h) \
-    $(wildcard include/config/idle/page/tracking.h) \
-    $(wildcard include/config/thp/swap.h) \
-    $(wildcard include/config/ksm.h) \
-  include/linux/memory_hotplug.h \
-    $(wildcard include/config/arch/has/add/pages.h) \
-    $(wildcard include/config/have/arch/nodedata/extension.h) \
-    $(wildcard include/config/have/bootmem/info/node.h) \
-  include/linux/notifier.h \
-    $(wildcard include/config/tree/srcu.h) \
-  include/linux/srcu.h \
-    $(wildcard include/config/tiny/srcu.h) \
-    $(wildcard include/config/srcu.h) \
-  include/linux/rcu_segcblist.h \
-  include/linux/srcutree.h \
-  include/linux/rcu_node_tree.h \
-    $(wildcard include/config/rcu/fanout.h) \
-    $(wildcard include/config/rcu/fanout/leaf.h) \
-  include/linux/topology.h \
-    $(wildcard include/config/use/percpu/numa/node/id.h) \
-    $(wildcard include/config/sched/smt.h) \
-  include/linux/arch_topology.h \
-    $(wildcard include/config/generic/arch/topology.h) \
-  arch/arm/include/asm/topology.h \
-    $(wildcard include/config/arm/cpu/topology.h) \
-    $(wildcard include/config/bl/switcher.h) \
-  include/asm-generic/topology.h \
-  include/linux/kconfig.h \
-  include/linux/local_lock.h \
-  include/linux/local_lock_internal.h \
-  include/linux/pid.h \
-  include/linux/refcount.h \
-  include/linux/capability.h \
-  include/uapi/linux/capability.h \
-  include/linux/semaphore.h \
-  include/linux/fcntl.h \
-    $(wildcard include/config/arch/32bit/off/t.h) \
-  include/uapi/linux/fcntl.h \
-  arch/arm/include/uapi/asm/fcntl.h \
-  include/uapi/asm-generic/fcntl.h \
-  include/uapi/linux/openat2.h \
-  include/linux/migrate_mode.h \
-  include/linux/percpu-rwsem.h \
-  include/linux/rcuwait.h \
-  include/linux/sched/signal.h \
-    $(wildcard include/config/sched/autogroup.h) \
-    $(wildcard include/config/bsd/process/acct.h) \
-    $(wildcard include/config/taskstats.h) \
-    $(wildcard include/config/audit.h) \
-    $(wildcard include/config/stack/growsup.h) \
-  include/linux/signal.h \
-    $(wildcard include/config/proc/fs.h) \
-  include/linux/signal_types.h \
-    $(wildcard include/config/old/sigaction.h) \
-  include/uapi/linux/signal.h \
-  arch/arm/include/asm/signal.h \
-  arch/arm/include/uapi/asm/signal.h \
-  include/uapi/asm-generic/signal-defs.h \
-  arch/arm/include/uapi/asm/sigcontext.h \
-  arch/arm/include/generated/uapi/asm/siginfo.h \
-  include/uapi/asm-generic/siginfo.h \
-  include/linux/sched.h \
-    $(wildcard include/config/virt/cpu/accounting/native.h) \
-    $(wildcard include/config/sched/info.h) \
-    $(wildcard include/config/schedstats.h) \
-    $(wildcard include/config/fair/group/sched.h) \
-    $(wildcard include/config/rt/group/sched.h) \
-    $(wildcard include/config/rt/mutexes.h) \
-    $(wildcard include/config/uclamp/task.h) \
-    $(wildcard include/config/uclamp/buckets/count.h) \
-    $(wildcard include/config/cgroup/sched.h) \
-    $(wildcard include/config/blk/dev/io/trace.h) \
-    $(wildcard include/config/psi.h) \
-    $(wildcard include/config/compat/brk.h) \
-    $(wildcard include/config/cgroups.h) \
-    $(wildcard include/config/blk/cgroup.h) \
-    $(wildcard include/config/stackprotector.h) \
-    $(wildcard include/config/arch/has/scaled/cputime.h) \
-    $(wildcard include/config/virt/cpu/accounting/gen.h) \
-    $(wildcard include/config/posix/cputimers.h) \
-    $(wildcard include/config/posix/cpu/timers/task/work.h) \
-    $(wildcard include/config/keys.h) \
-    $(wildcard include/config/sysvipc.h) \
-    $(wildcard include/config/detect/hung/task.h) \
-    $(wildcard include/config/io/uring.h) \
-    $(wildcard include/config/auditsyscall.h) \
-    $(wildcard include/config/ubsan.h) \
-    $(wildcard include/config/ubsan/trap.h) \
-    $(wildcard include/config/task/xacct.h) \
-    $(wildcard include/config/cpusets.h) \
-    $(wildcard include/config/x86/cpu/resctrl.h) \
-    $(wildcard include/config/futex.h) \
-    $(wildcard include/config/perf/events.h) \
-    $(wildcard include/config/rseq.h) \
-    $(wildcard include/config/task/delay/acct.h) \
-    $(wildcard include/config/fault/injection.h) \
-    $(wildcard include/config/latencytop.h) \
-    $(wildcard include/config/kunit.h) \
-    $(wildcard include/config/function/graph/tracer.h) \
-    $(wildcard include/config/bcache.h) \
-    $(wildcard include/config/vmap/stack.h) \
-    $(wildcard include/config/livepatch.h) \
-    $(wildcard include/config/gcc/plugin/stackleak.h) \
-    $(wildcard include/config/x86/mce.h) \
-    $(wildcard include/config/arch/task/struct/on/stack.h) \
-    $(wildcard include/config/debug/rseq.h) \
-  include/uapi/linux/sched.h \
-  include/linux/sem.h \
-  include/uapi/linux/sem.h \
-  include/linux/ipc.h \
-  include/linux/rhashtable-types.h \
-  include/uapi/linux/ipc.h \
-  arch/arm/include/generated/uapi/asm/ipcbuf.h \
-  include/uapi/asm-generic/ipcbuf.h \
-  arch/arm/include/generated/uapi/asm/sembuf.h \
-  include/uapi/asm-generic/sembuf.h \
-  include/linux/shm.h \
-  include/uapi/linux/shm.h \
-  include/uapi/asm-generic/hugetlb_encode.h \
-  arch/arm/include/generated/uapi/asm/shmbuf.h \
-  include/uapi/asm-generic/shmbuf.h \
-  arch/arm/include/asm/shmparam.h \
-  include/linux/kcov.h \
-  include/uapi/linux/kcov.h \
-  include/linux/plist.h \
-    $(wildcard include/config/debug/plist.h) \
-  include/linux/hrtimer.h \
-    $(wildcard include/config/high/res/timers.h) \
-    $(wildcard include/config/time/low/res.h) \
-    $(wildcard include/config/timerfd.h) \
-  include/linux/hrtimer_defs.h \
-  include/linux/timerqueue.h \
-  include/linux/seccomp.h \
-    $(wildcard include/config/seccomp.h) \
-    $(wildcard include/config/have/arch/seccomp/filter.h) \
-    $(wildcard include/config/seccomp/filter.h) \
-    $(wildcard include/config/checkpoint/restore.h) \
-  include/uapi/linux/seccomp.h \
-  arch/arm/include/generated/asm/seccomp.h \
-  include/asm-generic/seccomp.h \
-  include/uapi/linux/unistd.h \
-  arch/arm/include/asm/unistd.h \
-    $(wildcard include/config/oabi/compat.h) \
-  arch/arm/include/uapi/asm/unistd.h \
-  arch/arm/include/generated/uapi/asm/unistd-eabi.h \
-  arch/arm/include/generated/uapi/asm/unistd-common.h \
-  arch/arm/include/generated/asm/unistd-nr.h \
-  include/linux/resource.h \
-  include/uapi/linux/resource.h \
-  arch/arm/include/generated/uapi/asm/resource.h \
-  include/asm-generic/resource.h \
-  include/uapi/asm-generic/resource.h \
-  include/linux/latencytop.h \
-  include/linux/sched/prio.h \
-  include/linux/sched/types.h \
-  include/linux/task_io_accounting.h \
-    $(wildcard include/config/task/io/accounting.h) \
-  include/linux/posix-timers.h \
-  include/linux/alarmtimer.h \
-    $(wildcard include/config/rtc/class.h) \
-  include/linux/task_work.h \
-  include/uapi/linux/rseq.h \
-  include/linux/kcsan.h \
-  include/linux/sched/jobctl.h \
-  include/linux/sched/task.h \
-    $(wildcard include/config/have/exit/thread.h) \
-    $(wildcard include/config/arch/wants/dynamic/task/struct.h) \
-    $(wildcard include/config/have/arch/thread/struct/whitelist.h) \
-  include/linux/uaccess.h \
-    $(wildcard include/config/set/fs.h) \
-  include/linux/fault-inject-usercopy.h \
-    $(wildcard include/config/fault/injection/usercopy.h) \
-  include/linux/instrumented.h \
-  arch/arm/include/asm/uaccess.h \
-    $(wildcard include/config/cpu/sw/domain/pan.h) \
-    $(wildcard include/config/cpu/use/domains.h) \
-    $(wildcard include/config/uaccess/with/memcpy.h) \
-  arch/arm/include/asm/domain.h \
-    $(wildcard include/config/io/36.h) \
-    $(wildcard include/config/cpu/cp15/mmu.h) \
-  arch/arm/include/generated/asm/extable.h \
-  include/asm-generic/extable.h \
-  include/linux/cred.h \
-    $(wildcard include/config/debug/credentials.h) \
-  include/linux/key.h \
-    $(wildcard include/config/key/notifications.h) \
-    $(wildcard include/config/net.h) \
-    $(wildcard include/config/sysctl.h) \
-  include/linux/sysctl.h \
-  include/uapi/linux/sysctl.h \
-  include/linux/assoc_array.h \
-    $(wildcard include/config/associative/array.h) \
-  include/linux/sched/user.h \
-    $(wildcard include/config/fanotify.h) \
-    $(wildcard include/config/posix/mqueue.h) \
-    $(wildcard include/config/bpf/syscall.h) \
-    $(wildcard include/config/watch/queue.h) \
-  include/linux/ratelimit.h \
-  include/linux/rcu_sync.h \
-  include/linux/delayed_call.h \
-  include/linux/uuid.h \
-  include/uapi/linux/uuid.h \
-  include/linux/errseq.h \
-  include/linux/ioprio.h \
-  include/linux/sched/rt.h \
-  include/linux/iocontext.h \
-  include/linux/fs_types.h \
-  include/uapi/linux/fs.h \
-  include/uapi/linux/ioctl.h \
-  arch/arm/include/generated/uapi/asm/ioctl.h \
-  include/asm-generic/ioctl.h \
-  include/uapi/asm-generic/ioctl.h \
-  include/linux/quota.h \
-    $(wildcard include/config/quota/netlink/interface.h) \
-  include/linux/percpu_counter.h \
-  include/uapi/linux/dqblk_xfs.h \
-  include/linux/dqblk_v1.h \
-  include/linux/dqblk_v2.h \
-  include/linux/dqblk_qtree.h \
-  include/linux/projid.h \
-  include/uapi/linux/quota.h \
-  include/linux/nfs_fs_i.h \
-  include/linux/module.h \
-    $(wildcard include/config/modules/tree/lookup.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/bpf/events.h) \
-    $(wildcard include/config/jump/label.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/kprobes.h) \
-    $(wildcard include/config/have/static/call/inline.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/function/error/injection.h) \
-  include/linux/kmod.h \
-  include/linux/umh.h \
-  include/linux/elf.h \
-    $(wildcard include/config/arch/use/gnu/property.h) \
-    $(wildcard include/config/arch/have/elf/prot.h) \
-  arch/arm/include/asm/elf.h \
-  arch/arm/include/asm/vdso_datapage.h \
-  include/vdso/datapage.h \
-    $(wildcard include/config/arch/has/vdso/data.h) \
-  include/uapi/asm-generic/errno-base.h \
-  include/vdso/clocksource.h \
-    $(wildcard include/config/generic/gettimeofday.h) \
-  arch/arm/include/asm/vdso/clocksource.h \
-  include/vdso/processor.h \
-  arch/arm/include/asm/vdso/gettimeofday.h \
-    $(wildcard include/config/arm/arch/timer.h) \
-  arch/arm/include/asm/vdso/cp15.h \
-    $(wildcard include/config/cpu/cp15.h) \
-  arch/arm/include/asm/user.h \
-  include/uapi/linux/elf.h \
-  include/uapi/linux/elf-em.h \
-  include/linux/kobject.h \
-    $(wildcard include/config/uevent/helper.h) \
-    $(wildcard include/config/debug/kobject/release.h) \
-  include/linux/sysfs.h \
-  include/linux/kernfs.h \
-    $(wildcard include/config/kernfs.h) \
-  include/linux/idr.h \
-  include/linux/kobject_ns.h \
-  include/linux/kref.h \
-  include/linux/moduleparam.h \
-    $(wildcard include/config/alpha.h) \
-    $(wildcard include/config/ia64.h) \
-    $(wildcard include/config/ppc64.h) \
-  include/linux/jump_label.h \
-    $(wildcard include/config/have/arch/jump/label/relative.h) \
-  arch/arm/include/asm/jump_label.h \
-  include/linux/rbtree_latch.h \
-  include/linux/error-injection.h \
-  include/asm-generic/error-injection.h \
-  include/linux/tracepoint-defs.h \
-  include/linux/static_key.h \
-  include/linux/static_call_types.h \
-    $(wildcard include/config/have/static/call.h) \
-  arch/arm/include/asm/module.h \
-    $(wildcard include/config/arm/unwind.h) \
-    $(wildcard include/config/arm/module/plts.h) \
-  include/asm-generic/module.h \
-    $(wildcard include/config/have/mod/arch/specific.h) \
-    $(wildcard include/config/modules/use/elf/rel.h) \
-    $(wildcard include/config/modules/use/elf/rela.h) \
-  include/linux/cdev.h \
-  include/linux/device.h \
-    $(wildcard include/config/debug/devres.h) \
-    $(wildcard include/config/energy/model.h) \
-    $(wildcard include/config/generic/msi/irq/domain.h) \
-    $(wildcard include/config/pinctrl.h) \
-    $(wildcard include/config/generic/msi/irq.h) \
-    $(wildcard include/config/dma/ops.h) \
-    $(wildcard include/config/dma/declare/coherent.h) \
-    $(wildcard include/config/dma/cma.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/device.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/cpu.h) \
-    $(wildcard include/config/arch/has/sync/dma/for/cpu/all.h) \
-    $(wildcard include/config/dma/ops/bypass.h) \
-    $(wildcard include/config/of.h) \
-    $(wildcard include/config/devtmpfs.h) \
-    $(wildcard include/config/sysfs/deprecated.h) \
-  include/linux/dev_printk.h \
-  include/linux/energy_model.h \
-  include/linux/sched/cpufreq.h \
-    $(wildcard include/config/cpu/freq.h) \
-  include/linux/sched/topology.h \
-    $(wildcard include/config/sched/debug.h) \
-    $(wildcard include/config/sched/mc.h) \
-  include/linux/sched/idle.h \
-  include/linux/sched/sd_flags.h \
-  include/linux/ioport.h \
-    $(wildcard include/config/io/strict/devmem.h) \
-  include/linux/klist.h \
-  include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  include/linux/overflow.h \
-  include/linux/device/bus.h \
-    $(wildcard include/config/acpi.h) \
-  include/linux/device/class.h \
-  include/linux/device/driver.h \
-  arch/arm/include/asm/device.h \
-    $(wildcard include/config/dmabounce.h) \
-    $(wildcard include/config/arm/dma/use/iommu.h) \
-    $(wildcard include/config/arch/omap.h) \
-  include/linux/pm_wakeup.h \
-  include/linux/interrupt.h \
-    $(wildcard include/config/irq/forced/threading.h) \
-    $(wildcard include/config/generic/irq/probe.h) \
-    $(wildcard include/config/irq/timings.h) \
-  include/linux/irqreturn.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/hardirq.h \
-  include/linux/context_tracking_state.h \
-    $(wildcard include/config/context/tracking.h) \
-  include/linux/ftrace_irq.h \
-    $(wildcard include/config/hwlat/tracer.h) \
-  include/linux/vtime.h \
-    $(wildcard include/config/virt/cpu/accounting.h) \
-    $(wildcard include/config/irq/time/accounting.h) \
-  arch/arm/include/asm/hardirq.h \
-  arch/arm/include/asm/irq.h \
-    $(wildcard include/config/sparse/irq.h) \
-  include/linux/irq_cpustat.h \
-  arch/arm/include/asm/sections.h \
-  include/asm-generic/sections.h \
-  include/linux/poll.h \
-  include/uapi/linux/poll.h \
-  arch/arm/include/generated/uapi/asm/poll.h \
-  include/uapi/asm-generic/poll.h \
-  include/uapi/linux/eventpoll.h \
-  include/linux/delay.h \
-  arch/arm/include/asm/delay.h \
-  include/linux/gpio.h \
-    $(wildcard include/config/gpiolib.h) \
-    $(wildcard include/config/arch/have/custom/gpio/h.h) \
-  arch/arm/include/asm/gpio.h \
-    $(wildcard include/config/arch/nr/gpio.h) \
-  include/asm-generic/gpio.h \
-  include/linux/gpio/driver.h \
-    $(wildcard include/config/irq/domain/hierarchy.h) \
-    $(wildcard include/config/gpio/generic.h) \
-    $(wildcard include/config/gpiolib/irqchip.h) \
-    $(wildcard include/config/of/gpio.h) \
-  include/linux/irq.h \
-    $(wildcard include/config/generic/irq/effective/aff/mask.h) \
-    $(wildcard include/config/generic/irq/ipi.h) \
-    $(wildcard include/config/generic/irq/migration.h) \
-    $(wildcard include/config/generic/pending/irq.h) \
-    $(wildcard include/config/hardirqs/sw/resend.h) \
-    $(wildcard include/config/generic/irq/legacy/alloc/hwirq.h) \
-    $(wildcard include/config/generic/irq/legacy.h) \
-    $(wildcard include/config/generic/irq/multi/handler.h) \
-  include/linux/irqhandler.h \
-  include/linux/io.h \
-    $(wildcard include/config/have/arch/huge/vmap.h) \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/pci.h) \
-  arch/arm/include/asm/io.h \
-    $(wildcard include/config/need/mach/io/h.h) \
-    $(wildcard include/config/pcmcia/soc/common.h) \
-    $(wildcard include/config/isa.h) \
-    $(wildcard include/config/pccard.h) \
-  include/asm-generic/pci_iomap.h \
-    $(wildcard include/config/no/generic/pci/ioport/map.h) \
-    $(wildcard include/config/generic/pci/iomap.h) \
-  include/asm-generic/io.h \
-    $(wildcard include/config/generic/iomap.h) \
-    $(wildcard include/config/generic/ioremap.h) \
-    $(wildcard include/config/virt/to/bus.h) \
-  include/linux/logic_pio.h \
-    $(wildcard include/config/indirect/pio.h) \
-  include/linux/fwnode.h \
-  include/linux/vmalloc.h \
-    $(wildcard include/config/kasan/vmalloc.h) \
-  arch/arm/include/asm/vmalloc.h \
-  include/linux/slab.h \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
-    $(wildcard include/config/slab.h) \
-    $(wildcard include/config/slub.h) \
-    $(wildcard include/config/slob.h) \
-  include/linux/percpu-refcount.h \
-  include/linux/kasan.h \
-    $(wildcard include/config/kasan/generic.h) \
-    $(wildcard include/config/kasan/inline.h) \
-  arch/arm/include/generated/asm/irq_regs.h \
-  include/asm-generic/irq_regs.h \
-  include/linux/irqdesc.h \
-    $(wildcard include/config/generic/irq/debugfs.h) \
-    $(wildcard include/config/handle/domain/irq.h) \
-    $(wildcard include/config/irq/domain.h) \
-  arch/arm/include/asm/hw_irq.h \
-  include/linux/irqchip/chained_irq.h \
-  include/linux/irqdomain.h \
-  include/linux/of.h \
-    $(wildcard include/config/of/dynamic.h) \
-    $(wildcard include/config/sparc.h) \
-    $(wildcard include/config/of/promtree.h) \
-    $(wildcard include/config/of/kobj.h) \
-    $(wildcard include/config/of/numa.h) \
-    $(wildcard include/config/of/overlay.h) \
-  include/linux/mod_devicetable.h \
-  include/linux/property.h \
-  include/linux/pinctrl/pinctrl.h \
-    $(wildcard include/config/generic/pinconf.h) \
-  include/linux/seq_file.h \
-  include/linux/pinctrl/pinctrl-state.h \
-  include/linux/pinctrl/devinfo.h \
-  include/linux/pinctrl/consumer.h \
-  include/linux/pinctrl/pinconf-generic.h \
-  include/linux/pinctrl/machine.h \
-  include/linux/gpio/consumer.h \
-    $(wildcard include/config/gpio/sysfs.h) \
-  include/linux/i2c.h \
-    $(wildcard include/config/i2c.h) \
-    $(wildcard include/config/i2c/slave.h) \
-    $(wildcard include/config/i2c/boardinfo.h) \
-    $(wildcard include/config/i2c/mux.h) \
-  include/linux/acpi.h \
-    $(wildcard include/config/acpi/debugger.h) \
-    $(wildcard include/config/x86.h) \
-    $(wildcard include/config/acpi/processor/cstate.h) \
-    $(wildcard include/config/acpi/hotplug/cpu.h) \
-    $(wildcard include/config/acpi/hotplug/ioapic.h) \
-    $(wildcard include/config/x86/io/apic.h) \
-    $(wildcard include/config/acpi/wmi.h) \
-    $(wildcard include/config/acpi/numa.h) \
-    $(wildcard include/config/hibernation.h) \
-    $(wildcard include/config/acpi/hotplug/memory.h) \
-    $(wildcard include/config/acpi/container.h) \
-    $(wildcard include/config/acpi/gtdt.h) \
-    $(wildcard include/config/acpi/table/upgrade.h) \
-    $(wildcard include/config/acpi/watchdog.h) \
-    $(wildcard include/config/acpi/spcr/table.h) \
-    $(wildcard include/config/acpi/generic/gsi.h) \
-    $(wildcard include/config/acpi/lpit.h) \
-    $(wildcard include/config/acpi/pptt.h) \
-  include/linux/resource_ext.h \
-  include/acpi/acpi.h \
-  include/acpi/platform/acenv.h \
-  include/acpi/platform/acgcc.h \
-  include/acpi/platform/aclinux.h \
-    $(wildcard include/config/acpi/reduced/hardware/only.h) \
-    $(wildcard include/config/acpi/debug.h) \
-  include/linux/ctype.h \
-  include/acpi/acnames.h \
-  include/acpi/actypes.h \
-  include/acpi/acexcep.h \
-  include/acpi/actbl.h \
-  include/acpi/actbl1.h \
-  include/acpi/actbl2.h \
-  include/acpi/actbl3.h \
-  include/acpi/acrestyp.h \
-  include/acpi/platform/acenvex.h \
-  include/acpi/platform/aclinuxex.h \
-  include/acpi/platform/acgccex.h \
-  include/acpi/acoutput.h \
-  include/acpi/acpiosxf.h \
-  include/acpi/acpixf.h \
-  include/acpi/acconfig.h \
-  include/acpi/acbuffer.h \
-  include/acpi/acpi_numa.h \
-    $(wildcard include/config/acpi/hmat.h) \
-  include/linux/rtmutex.h \
-    $(wildcard include/config/debug/rt/mutexes.h) \
-  include/uapi/linux/i2c.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/vdso/ktime.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/timekeeping.h \
+    $(wildcard include/config/GENERIC_CMOS_UPDATE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/clocksource_ids.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/debugobjects.h \
+    $(wildcard include/config/DEBUG_OBJECTS) \
+    $(wildcard include/config/DEBUG_OBJECTS_FREE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/ipc.h \
+  arch/arm64/include/generated/uapi/asm/ipcbuf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/ipcbuf.h \
+  arch/arm64/include/generated/uapi/asm/sembuf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/sembuf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/shm.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/page.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/personality.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/personality.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/getorder.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/shm.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/hugetlb_encode.h \
+  arch/arm64/include/generated/uapi/asm/shmbuf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/shmbuf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/shmparam.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/shmparam.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kmsan_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/plist.h \
+    $(wildcard include/config/DEBUG_PLIST) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/hrtimer.h \
+    $(wildcard include/config/HIGH_RES_TIMERS) \
+    $(wildcard include/config/TIME_LOW_RES) \
+    $(wildcard include/config/TIMERFD) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/hrtimer_defs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rbtree.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rbtree_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/timerqueue.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/seccomp.h \
+    $(wildcard include/config/SECCOMP) \
+    $(wildcard include/config/HAVE_ARCH_SECCOMP_FILTER) \
+    $(wildcard include/config/SECCOMP_FILTER) \
+    $(wildcard include/config/CHECKPOINT_RESTORE) \
+    $(wildcard include/config/SECCOMP_CACHE_DEBUG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/seccomp.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/seccomp.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/unistd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/unistd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/unistd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/seccomp.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/unistd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/nodemask.h \
+    $(wildcard include/config/HIGHMEM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/resource.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/resource.h \
+  arch/arm64/include/generated/uapi/asm/resource.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/resource.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/resource.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/latencytop.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/prio.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/signal_types.h \
+    $(wildcard include/config/OLD_SIGACTION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/signal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/signal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/signal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/signal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/signal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/signal-defs.h \
+  arch/arm64/include/generated/uapi/asm/siginfo.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/siginfo.h \
+  arch/arm64/include/generated/uapi/asm/siginfo.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/syscall_user_dispatch.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mm_types_task.h \
+    $(wildcard include/config/ARCH_WANT_BATCHED_UNMAP_TLB_FLUSH) \
+    $(wildcard include/config/SPLIT_PTLOCK_CPUS) \
+    $(wildcard include/config/ARCH_ENABLE_SPLIT_PMD_PTLOCK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/task_io_accounting.h \
+    $(wildcard include/config/TASK_IO_ACCOUNTING) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/posix-timers.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/alarmtimer.h \
+    $(wildcard include/config/RTC_CLASS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/rseq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kcsan.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rv.h \
+    $(wildcard include/config/RV_REACTORS) \
+  arch/arm64/include/generated/asm/kmap_size.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/kmap_size.h \
+    $(wildcard include/config/DEBUG_KMAP_LOCAL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/task_stack.h \
+    $(wildcard include/config/STACK_GROWSUP) \
+    $(wildcard include/config/DEBUG_STACK_USAGE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/magic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/stat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/list_lru.h \
+    $(wildcard include/config/MEMCG_KMEM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/shrinker.h \
+    $(wildcard include/config/SHRINKER_DEBUG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/xarray.h \
+    $(wildcard include/config/XARRAY_MULTI) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/gfp.h \
+    $(wildcard include/config/ZONE_DEVICE) \
+    $(wildcard include/config/PM_SLEEP) \
+    $(wildcard include/config/CONTIG_ALLOC) \
+    $(wildcard include/config/CMA) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mmzone.h \
+    $(wildcard include/config/ARCH_FORCE_MAX_ORDER) \
+    $(wildcard include/config/MEMORY_ISOLATION) \
+    $(wildcard include/config/ZSMALLOC) \
+    $(wildcard include/config/SWAP) \
+    $(wildcard include/config/TRANSPARENT_HUGEPAGE) \
+    $(wildcard include/config/LRU_GEN_STATS) \
+    $(wildcard include/config/MEMORY_HOTPLUG) \
+    $(wildcard include/config/PAGE_EXTENSION) \
+    $(wildcard include/config/DEFERRED_STRUCT_PAGE_INIT) \
+    $(wildcard include/config/HAVE_MEMORYLESS_NODES) \
+    $(wildcard include/config/SPARSEMEM_EXTREME) \
+    $(wildcard include/config/HAVE_ARCH_PFN_VALID) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pageblock-flags.h \
+    $(wildcard include/config/HUGETLB_PAGE) \
+    $(wildcard include/config/HUGETLB_PAGE_SIZE_VARIABLE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page-flags-layout.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/sparsemem.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mm_types.h \
+    $(wildcard include/config/HAVE_ALIGNED_STRUCT_PAGE) \
+    $(wildcard include/config/USERFAULTFD) \
+    $(wildcard include/config/HAVE_ARCH_COMPAT_MMAP_BASES) \
+    $(wildcard include/config/MEMBARRIER) \
+    $(wildcard include/config/AIO) \
+    $(wildcard include/config/MMU_NOTIFIER) \
+    $(wildcard include/config/KSM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/auxvec.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/auxvec.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/auxvec.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kref.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/maple_tree.h \
+    $(wildcard include/config/MAPLE_RCU_DISABLED) \
+    $(wildcard include/config/DEBUG_MAPLE_TREE_VERBOSE) \
+    $(wildcard include/config/DEBUG_MAPLE_TREE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rwsem.h \
+    $(wildcard include/config/RWSEM_SPIN_ON_OWNER) \
+    $(wildcard include/config/DEBUG_RWSEMS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/completion.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/swait.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/uprobes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/mmu.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page-flags.h \
+    $(wildcard include/config/ARCH_USES_PG_UNCACHED) \
+    $(wildcard include/config/MEMORY_FAILURE) \
+    $(wildcard include/config/PAGE_IDLE_FLAG) \
+    $(wildcard include/config/HUGETLB_PAGE_OPTIMIZE_VMEMMAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/local_lock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/local_lock_internal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/memory_hotplug.h \
+    $(wildcard include/config/HAVE_ARCH_NODEDATA_EXTENSION) \
+    $(wildcard include/config/ARCH_HAS_ADD_PAGES) \
+    $(wildcard include/config/MEMORY_HOTREMOVE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/notifier.h \
+    $(wildcard include/config/TREE_SRCU) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/srcu.h \
+    $(wildcard include/config/TINY_SRCU) \
+    $(wildcard include/config/SRCU) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcu_segcblist.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/srcutree.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcu_node_tree.h \
+    $(wildcard include/config/RCU_FANOUT) \
+    $(wildcard include/config/RCU_FANOUT_LEAF) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/topology.h \
+    $(wildcard include/config/USE_PERCPU_NUMA_NODE_ID) \
+    $(wildcard include/config/SCHED_SMT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/arch_topology.h \
+    $(wildcard include/config/ACPI_CPPC_LIB) \
+    $(wildcard include/config/GENERIC_ARCH_TOPOLOGY) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/topology.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/topology.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kconfig.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/mm.h \
+    $(wildcard include/config/ARCH_HAS_MEMBARRIER_CALLBACKS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sync_core.h \
+    $(wildcard include/config/ARCH_HAS_SYNC_CORE_BEFORE_USERMODE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ioasid.h \
+    $(wildcard include/config/IOASID) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/radix-tree.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/capability.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/capability.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/semaphore.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/fcntl.h \
+    $(wildcard include/config/ARCH_32BIT_OFF_T) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/fcntl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/uapi/asm/fcntl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/fcntl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/openat2.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/migrate_mode.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/percpu-rwsem.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcuwait.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/signal.h \
+    $(wildcard include/config/SCHED_AUTOGROUP) \
+    $(wildcard include/config/BSD_PROCESS_ACCT) \
+    $(wildcard include/config/TASKSTATS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/signal.h \
+    $(wildcard include/config/DYNAMIC_SIGFRAME) \
+    $(wildcard include/config/PROC_FS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/jobctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/task.h \
+    $(wildcard include/config/HAVE_EXIT_THREAD) \
+    $(wildcard include/config/ARCH_WANTS_DYNAMIC_TASK_STRUCT) \
+    $(wildcard include/config/HAVE_ARCH_THREAD_STRUCT_WHITELIST) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/uaccess.h \
+    $(wildcard include/config/ARCH_HAS_SUBPAGE_FAULTS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/fault-inject-usercopy.h \
+    $(wildcard include/config/FAULT_INJECTION_USERCOPY) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/uaccess.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/kernel-pgtable.h \
+    $(wildcard include/config/RANDOMIZE_BASE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/boot.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/asm-extable.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/mte.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/extable.h \
+    $(wildcard include/config/BPF_JIT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/access_ok.h \
+    $(wildcard include/config/ALTERNATE_USER_ADDRESS_SPACE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cred.h \
+    $(wildcard include/config/DEBUG_CREDENTIALS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/key.h \
+    $(wildcard include/config/KEY_NOTIFICATIONS) \
+    $(wildcard include/config/NET) \
+    $(wildcard include/config/SYSCTL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sysctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/sysctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/assoc_array.h \
+    $(wildcard include/config/ASSOCIATIVE_ARRAY) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/user.h \
+    $(wildcard include/config/VFIO_PCI_ZDEV_KVM) \
+    $(wildcard include/config/WATCH_QUEUE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/percpu_counter.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ratelimit.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rcu_sync.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/delayed_call.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/uuid.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/uuid.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/errseq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ioprio.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/rt.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/iocontext.h \
+    $(wildcard include/config/BLK_ICQ) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/ioprio.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/fs_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mount.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mnt_idmapping.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/slab.h \
+    $(wildcard include/config/DEBUG_SLAB) \
+    $(wildcard include/config/FAILSLAB) \
+    $(wildcard include/config/KFENCE) \
+    $(wildcard include/config/SLAB) \
+    $(wildcard include/config/SLUB) \
+    $(wildcard include/config/SLOB) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/percpu-refcount.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kasan.h \
+    $(wildcard include/config/KASAN_STACK) \
+    $(wildcard include/config/KASAN_VMALLOC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/fs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/quota.h \
+    $(wildcard include/config/QUOTA_NETLINK_INTERFACE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/dqblk_xfs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dqblk_v1.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dqblk_v2.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dqblk_qtree.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/projid.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/quota.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/nfs_fs_i.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/module.h \
+    $(wildcard include/config/MODULES_TREE_LOOKUP) \
+    $(wildcard include/config/STACKTRACE_BUILD_ID) \
+    $(wildcard include/config/ARCH_USES_CFI_TRAPS) \
+    $(wildcard include/config/MODULE_SIG) \
+    $(wildcard include/config/ARCH_WANTS_MODULES_DATA_IN_VMALLOC) \
+    $(wildcard include/config/KALLSYMS) \
+    $(wildcard include/config/TRACEPOINTS) \
+    $(wildcard include/config/BPF_EVENTS) \
+    $(wildcard include/config/EVENT_TRACING) \
+    $(wildcard include/config/KPROBES) \
+    $(wildcard include/config/MODULE_UNLOAD) \
+    $(wildcard include/config/CONSTRUCTORS) \
+    $(wildcard include/config/FUNCTION_ERROR_INJECTION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/buildid.h \
+    $(wildcard include/config/CRASH_CORE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kmod.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/umh.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/elf.h \
+    $(wildcard include/config/ARCH_USE_GNU_PROPERTY) \
+    $(wildcard include/config/ARCH_HAVE_ELF_PROT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/elf.h \
+    $(wildcard include/config/COMPAT_VDSO) \
+  arch/arm64/include/generated/asm/user.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/user.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/elf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/elf-em.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kobject.h \
+    $(wildcard include/config/UEVENT_HELPER) \
+    $(wildcard include/config/DEBUG_KOBJECT_RELEASE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sysfs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kernfs.h \
+    $(wildcard include/config/KERNFS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/idr.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kobject_ns.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/moduleparam.h \
+    $(wildcard include/config/ALPHA) \
+    $(wildcard include/config/IA64) \
+    $(wildcard include/config/PPC64) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rbtree_latch.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/error-injection.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/error-injection.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/tracepoint-defs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/module.h \
+    $(wildcard include/config/ARM64_MODULE_PLTS) \
+    $(wildcard include/config/DYNAMIC_FTRACE) \
+    $(wildcard include/config/ARM64_ERRATUM_843419) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/module.h \
+    $(wildcard include/config/HAVE_MOD_ARCH_SPECIFIC) \
+    $(wildcard include/config/MODULES_USE_ELF_REL) \
+    $(wildcard include/config/MODULES_USE_ELF_RELA) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cdev.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/device.h \
+    $(wildcard include/config/GENERIC_MSI_IRQ_DOMAIN) \
+    $(wildcard include/config/GENERIC_MSI_IRQ) \
+    $(wildcard include/config/ENERGY_MODEL) \
+    $(wildcard include/config/PINCTRL) \
+    $(wildcard include/config/DMA_OPS) \
+    $(wildcard include/config/DMA_DECLARE_COHERENT) \
+    $(wildcard include/config/DMA_CMA) \
+    $(wildcard include/config/SWIOTLB) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_DEVICE) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU_ALL) \
+    $(wildcard include/config/DMA_OPS_BYPASS) \
+    $(wildcard include/config/OF) \
+    $(wildcard include/config/DEVTMPFS) \
+    $(wildcard include/config/SYSFS_DEPRECATED) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dev_printk.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/energy_model.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/cpufreq.h \
+    $(wildcard include/config/CPU_FREQ) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/topology.h \
+    $(wildcard include/config/SCHED_DEBUG) \
+    $(wildcard include/config/SCHED_CLUSTER) \
+    $(wildcard include/config/SCHED_MC) \
+    $(wildcard include/config/CPU_FREQ_GOV_SCHEDUTIL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/idle.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/sd_flags.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ioport.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/klist.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pm.h \
+    $(wildcard include/config/VT_CONSOLE_SLEEP) \
+    $(wildcard include/config/CXL_SUSPEND) \
+    $(wildcard include/config/PM) \
+    $(wildcard include/config/PM_CLK) \
+    $(wildcard include/config/PM_GENERIC_DOMAINS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/device/bus.h \
+    $(wildcard include/config/ACPI) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/device/class.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/device/driver.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/device.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pm_wakeup.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/interrupt.h \
+    $(wildcard include/config/IRQ_FORCED_THREADING) \
+    $(wildcard include/config/GENERIC_IRQ_PROBE) \
+    $(wildcard include/config/IRQ_TIMINGS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqreturn.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/hardirq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/context_tracking_state.h \
+    $(wildcard include/config/CONTEXT_TRACKING_USER) \
+    $(wildcard include/config/CONTEXT_TRACKING) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ftrace_irq.h \
+    $(wildcard include/config/HWLAT_TRACER) \
+    $(wildcard include/config/OSNOISE_TRACER) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/vtime.h \
+    $(wildcard include/config/VIRT_CPU_ACCOUNTING) \
+    $(wildcard include/config/IRQ_TIME_ACCOUNTING) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/hardirq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/irq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/irq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/kvm_arm.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/esr.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/hardirq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irq.h \
+    $(wildcard include/config/GENERIC_IRQ_EFFECTIVE_AFF_MASK) \
+    $(wildcard include/config/GENERIC_IRQ_IPI) \
+    $(wildcard include/config/IRQ_DOMAIN_HIERARCHY) \
+    $(wildcard include/config/DEPRECATED_IRQ_CPU_ONOFFLINE) \
+    $(wildcard include/config/GENERIC_IRQ_MIGRATION) \
+    $(wildcard include/config/GENERIC_PENDING_IRQ) \
+    $(wildcard include/config/HARDIRQS_SW_RESEND) \
+    $(wildcard include/config/GENERIC_IRQ_LEGACY) \
+    $(wildcard include/config/GENERIC_IRQ_MULTI_HANDLER) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqhandler.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/io.h \
+    $(wildcard include/config/HAS_IOPORT_MAP) \
+    $(wildcard include/config/PCI) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/io.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pgtable.h \
+    $(wildcard include/config/HIGHPTE) \
+    $(wildcard include/config/ARCH_HAS_NONLEAF_PMD_YOUNG) \
+    $(wildcard include/config/GUP_GET_PTE_LOW_HIGH) \
+    $(wildcard include/config/HAVE_ARCH_TRANSPARENT_HUGEPAGE_PUD) \
+    $(wildcard include/config/HAVE_ARCH_SOFT_DIRTY) \
+    $(wildcard include/config/ARCH_ENABLE_THP_MIGRATION) \
+    $(wildcard include/config/ARCH_HAS_PTE_DEVMAP) \
+    $(wildcard include/config/HAVE_ARCH_HUGE_VMAP) \
+    $(wildcard include/config/X86_ESPFIX64) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/pgtable.h \
+    $(wildcard include/config/PAGE_TABLE_CHECK) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/proc-fns.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/pgtable-prot.h \
+    $(wildcard include/config/ARM64_BTI_KERNEL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/tlbflush.h \
+    $(wildcard include/config/ARM64_WORKAROUND_REPEAT_TLBI) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/fixmap.h \
+    $(wildcard include/config/ACPI_APEI_GHES) \
+    $(wildcard include/config/ARM_SDE_INTERFACE) \
+    $(wildcard include/config/UNMAP_KERNEL_AT_EL0) \
+    $(wildcard include/config/RELOCATABLE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/fixmap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page_table_check.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/pgtable_uffd.h \
+    $(wildcard include/config/HAVE_ARCH_USERFAULTFD_WP) \
+  arch/arm64/include/generated/asm/early_ioremap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/early_ioremap.h \
+    $(wildcard include/config/GENERIC_EARLY_IOREMAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/io.h \
+    $(wildcard include/config/GENERIC_IOMAP) \
+    $(wildcard include/config/TRACE_MMIO_ACCESS) \
+    $(wildcard include/config/GENERIC_IOREMAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/pci_iomap.h \
+    $(wildcard include/config/NO_GENERIC_PCI_IOPORT_MAP) \
+    $(wildcard include/config/GENERIC_PCI_IOMAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/logic_pio.h \
+    $(wildcard include/config/INDIRECT_PIO) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/fwnode.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/vmalloc.h \
+    $(wildcard include/config/HAVE_ARCH_HUGE_VMALLOC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/vmalloc.h \
+    $(wildcard include/config/PTDUMP_DEBUGFS) \
+  arch/arm64/include/generated/asm/irq_regs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/irq_regs.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqdesc.h \
+    $(wildcard include/config/GENERIC_IRQ_DEBUGFS) \
+    $(wildcard include/config/SPARSE_IRQ) \
+    $(wildcard include/config/IRQ_DOMAIN) \
+  arch/arm64/include/generated/asm/hw_irq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/hw_irq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/poll.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/poll.h \
+  arch/arm64/include/generated/uapi/asm/poll.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/poll.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/eventpoll.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/delay.h \
+  arch/arm64/include/generated/asm/delay.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/delay.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/gpio.h \
+    $(wildcard include/config/GPIOLIB) \
+    $(wildcard include/config/ARCH_HAVE_CUSTOM_GPIO_H) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/gpio.h \
+    $(wildcard include/config/ARCH_NR_GPIO) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/gpio/driver.h \
+    $(wildcard include/config/GPIO_GENERIC) \
+    $(wildcard include/config/GPIOLIB_IRQCHIP) \
+    $(wildcard include/config/OF_GPIO) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqchip/chained_irq.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/irqdomain.h \
+    $(wildcard include/config/IRQ_DOMAIN_NOMAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/of.h \
+    $(wildcard include/config/OF_DYNAMIC) \
+    $(wildcard include/config/SPARC) \
+    $(wildcard include/config/OF_PROMTREE) \
+    $(wildcard include/config/OF_KOBJ) \
+    $(wildcard include/config/OF_NUMA) \
+    $(wildcard include/config/OF_OVERLAY) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mod_devicetable.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/property.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/pinctrl.h \
+    $(wildcard include/config/GENERIC_PINCONF) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/seq_file.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/string_helpers.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ctype.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/pinctrl-state.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/devinfo.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/consumer.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/pinconf-generic.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pinctrl/machine.h \
+  arch/arm64/include/generated/asm/msi.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/msi.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/gpio/consumer.h \
+    $(wildcard include/config/GPIO_SYSFS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/i2c.h \
+    $(wildcard include/config/I2C) \
+    $(wildcard include/config/I2C_SLAVE) \
+    $(wildcard include/config/I2C_BOARDINFO) \
+    $(wildcard include/config/I2C_MUX) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/acpi.h \
+    $(wildcard include/config/ACPI_DEBUGGER) \
+    $(wildcard include/config/ACPI_TABLE_LIB) \
+    $(wildcard include/config/X86) \
+    $(wildcard include/config/LOONGARCH) \
+    $(wildcard include/config/ACPI_PROCESSOR_CSTATE) \
+    $(wildcard include/config/ACPI_HOTPLUG_CPU) \
+    $(wildcard include/config/ACPI_HOTPLUG_IOAPIC) \
+    $(wildcard include/config/X86_IO_APIC) \
+    $(wildcard include/config/ACPI_WMI) \
+    $(wildcard include/config/ACPI_NUMA) \
+    $(wildcard include/config/HIBERNATION) \
+    $(wildcard include/config/ACPI_HOTPLUG_MEMORY) \
+    $(wildcard include/config/ACPI_CONTAINER) \
+    $(wildcard include/config/ACPI_GTDT) \
+    $(wildcard include/config/ACPI_TABLE_UPGRADE) \
+    $(wildcard include/config/ACPI_WATCHDOG) \
+    $(wildcard include/config/ACPI_SPCR_TABLE) \
+    $(wildcard include/config/ACPI_GENERIC_GSI) \
+    $(wildcard include/config/ACPI_LPIT) \
+    $(wildcard include/config/ACPI_PPTT) \
+    $(wildcard include/config/ACPI_PCC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/resource_ext.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acpi.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/acenv.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/acgcc.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/aclinux.h \
+    $(wildcard include/config/ACPI_REDUCED_HARDWARE_ONLY) \
+    $(wildcard include/config/ACPI_DEBUG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acnames.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/actypes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acexcep.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/actbl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/actbl1.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/actbl2.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/actbl3.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acrestyp.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/acenvex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/aclinuxex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/platform/acgccex.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acoutput.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acpiosxf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acpixf.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acconfig.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acbuffer.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/acpi/acpi_numa.h \
+    $(wildcard include/config/ACPI_HMAT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/regulator/consumer.h \
+    $(wildcard include/config/REGULATOR) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/suspend.h \
+    $(wildcard include/config/VT) \
+    $(wildcard include/config/SUSPEND) \
+    $(wildcard include/config/HIBERNATION_SNAPSHOT_DEV) \
+    $(wildcard include/config/PM_SLEEP_DEBUG) \
+    $(wildcard include/config/PM_AUTOSLEEP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/swap.h \
+    $(wildcard include/config/PTE_MARKER) \
+    $(wildcard include/config/DEVICE_PRIVATE) \
+    $(wildcard include/config/MIGRATION) \
+    $(wildcard include/config/FRONTSWAP) \
+    $(wildcard include/config/THP_SWAP) \
+    $(wildcard include/config/ZSWAP) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/memcontrol.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cgroup.h \
+    $(wildcard include/config/CGROUP_CPUACCT) \
+    $(wildcard include/config/SOCK_CGROUP_DATA) \
+    $(wildcard include/config/CGROUP_DATA) \
+    $(wildcard include/config/CGROUP_BPF) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/cgroupstats.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/taskstats.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ns_common.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/nsproxy.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/user_namespace.h \
+    $(wildcard include/config/INOTIFY_USER) \
+    $(wildcard include/config/FANOTIFY) \
+    $(wildcard include/config/PERSISTENT_KEYRINGS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kernel_stat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cgroup-defs.h \
+    $(wildcard include/config/CGROUP_NET_CLASSID) \
+    $(wildcard include/config/CGROUP_NET_PRIO) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/u64_stats_sync.h \
+  arch/arm64/include/generated/asm/local64.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/local64.h \
+  arch/arm64/include/generated/asm/local.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/local.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bpf-cgroup-defs.h \
+    $(wildcard include/config/BPF_LSM) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/psi_types.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kthread.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cgroup_subsys.h \
+    $(wildcard include/config/CGROUP_DEVICE) \
+    $(wildcard include/config/CGROUP_FREEZER) \
+    $(wildcard include/config/CGROUP_PERF) \
+    $(wildcard include/config/CGROUP_HUGETLB) \
+    $(wildcard include/config/CGROUP_PIDS) \
+    $(wildcard include/config/CGROUP_RDMA) \
+    $(wildcard include/config/CGROUP_MISC) \
+    $(wildcard include/config/CGROUP_DEBUG) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/vm_event_item.h \
+    $(wildcard include/config/MEMORY_BALLOON) \
+    $(wildcard include/config/BALLOON_COMPACTION) \
+    $(wildcard include/config/DEBUG_TLBFLUSH) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page_counter.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/vmpressure.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/eventfd.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mm.h \
+    $(wildcard include/config/HAVE_ARCH_MMAP_RND_BITS) \
+    $(wildcard include/config/HAVE_ARCH_MMAP_RND_COMPAT_BITS) \
+    $(wildcard include/config/MEM_SOFT_DIRTY) \
+    $(wildcard include/config/ARCH_USES_HIGH_VMA_FLAGS) \
+    $(wildcard include/config/ARCH_HAS_PKEYS) \
+    $(wildcard include/config/PPC) \
+    $(wildcard include/config/PARISC) \
+    $(wildcard include/config/SPARC64) \
+    $(wildcard include/config/HAVE_ARCH_USERFAULTFD_MINOR) \
+    $(wildcard include/config/SHMEM) \
+    $(wildcard include/config/ARCH_HAS_PTE_SPECIAL) \
+    $(wildcard include/config/DEBUG_VM_RB) \
+    $(wildcard include/config/HAVE_FAST_GUP) \
+    $(wildcard include/config/PAGE_POISONING) \
+    $(wildcard include/config/INIT_ON_ALLOC_DEFAULT_ON) \
+    $(wildcard include/config/INIT_ON_FREE_DEFAULT_ON) \
+    $(wildcard include/config/DEBUG_PAGEALLOC) \
+    $(wildcard include/config/HUGETLBFS) \
+    $(wildcard include/config/MAPPING_DIRTY_HELPERS) \
+    $(wildcard include/config/ANON_VMA_NAME) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mmap_lock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/range.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page_ext.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stacktrace.h \
+    $(wildcard include/config/ARCH_STACKWALK) \
+    $(wildcard include/config/STACKTRACE) \
+    $(wildcard include/config/HAVE_RELIABLE_STACKTRACE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/stackdepot.h \
+    $(wildcard include/config/STACKDEPOT) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/page_ref.h \
+    $(wildcard include/config/DEBUG_PAGE_REF) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/memremap.h \
+    $(wildcard include/config/PCI_P2PDMA) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/huge_mm.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/sched/coredump.h \
+    $(wildcard include/config/CORE_DUMP_DEFAULT_ELF_HEADERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/vmstat.h \
+    $(wildcard include/config/VM_EVENT_COUNTERS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/writeback.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/flex_proportions.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/backing-dev-defs.h \
+    $(wildcard include/config/DEBUG_FS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/blk_types.h \
+    $(wildcard include/config/FAIL_MAKE_REQUEST) \
+    $(wildcard include/config/BLK_CGROUP_IOCOST) \
+    $(wildcard include/config/BLK_INLINE_ENCRYPTION) \
+    $(wildcard include/config/BLK_DEV_INTEGRITY) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bvec.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/highmem.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/cacheflush.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/cacheflush.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kgdb.h \
+    $(wildcard include/config/HAVE_ARCH_KGDB) \
+    $(wildcard include/config/KGDB) \
+    $(wildcard include/config/SERIAL_KGDB_NMI) \
+    $(wildcard include/config/KGDB_HONOUR_BLOCKLIST) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kprobes.h \
+    $(wildcard include/config/KRETPROBE_ON_RETHOOK) \
+    $(wildcard include/config/KPROBES_SANITY_TEST) \
+    $(wildcard include/config/OPTPROBES) \
+    $(wildcard include/config/KPROBES_ON_FTRACE) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ftrace.h \
+    $(wildcard include/config/FUNCTION_TRACER) \
+    $(wildcard include/config/HAVE_DYNAMIC_FTRACE_WITH_ARGS) \
+    $(wildcard include/config/DYNAMIC_FTRACE_WITH_REGS) \
+    $(wildcard include/config/DYNAMIC_FTRACE_WITH_DIRECT_CALLS) \
+    $(wildcard include/config/HAVE_DYNAMIC_FTRACE_WITH_DIRECT_CALLS) \
+    $(wildcard include/config/STACK_TRACER) \
+    $(wildcard include/config/FRAME_POINTER) \
+    $(wildcard include/config/FUNCTION_PROFILER) \
+    $(wildcard include/config/FTRACE_SYSCALLS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/trace_recursion.h \
+    $(wildcard include/config/FTRACE_RECORD_RECURSION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/trace_clock.h \
+  arch/arm64/include/generated/asm/trace_clock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/trace_clock.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kallsyms.h \
+    $(wildcard include/config/KALLSYMS_ALL) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/ptrace.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pid_namespace.h \
+    $(wildcard include/config/PID_NS) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/ptrace.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/ftrace.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/compat.h \
+    $(wildcard include/config/ARCH_HAS_SYSCALL_WRAPPER) \
+    $(wildcard include/config/X86_X32_ABI) \
+    $(wildcard include/config/COMPAT_OLD_SIGACTION) \
+    $(wildcard include/config/ODD_RT_SIGACTION) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/socket.h \
+  arch/arm64/include/generated/uapi/asm/socket.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/socket.h \
+  arch/arm64/include/generated/uapi/asm/sockios.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/asm-generic/sockios.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/sockios.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/uio.h \
+    $(wildcard include/config/ARCH_HAS_COPY_MC) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/uio.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/socket.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/if.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/libc-compat.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/hdlc/ioctl.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/aio_abi.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/syscall_wrapper.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/freelist.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rethook.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/kprobes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/kprobes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/probes.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/kgdb.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/arch/arm64/include/asm/debug-monitors.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/asm-generic/cacheflush.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/kmsan.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/dma-direction.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/highmem-internal.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/bio.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/mempool.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/node.h \
+    $(wildcard include/config/HMEM_REPORTING) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/pagemap.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/hugetlb_inline.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/mempolicy.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/freezer.h \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/linux/rtmutex.h \
+    $(wildcard include/config/DEBUG_RT_MUTEXES) \
+  /usr/src/linux-headers-6.1.0-rpi8-common-rpi/include/uapi/linux/i2c.h \
 
-/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o: $(deps_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o)
+/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o: $(deps_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o)
 
-$(deps_/home/pi/ClonedRepos/RaspberryPiKernelEncoder/device_file.o):
+$(deps_/home/pi/docker/catkin_ws/src/ClonedRepos/RaspberryPiKernelEncoder/device_file.o):
