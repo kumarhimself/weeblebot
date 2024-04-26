@@ -25,12 +25,12 @@
 #if QUADRATURE
 #define PIN_1A 17
 #define PIN_1B 27
-#define PIN_2A 5
-#define PIN_2B 6
+#define PIN_2A 16
+#define PIN_2B 19
 #define PIN_3A 23
 #define PIN_3B 24
-#define PIN_4A 16
-#define PIN_4B 26
+#define PIN_4A 5
+#define PIN_4B 6
 
 volatile static int encoder_counts[NUM_ENCODERS] = {0};
 volatile static int encoder_pins[8] = {PIN_1A,PIN_1B,PIN_2A,PIN_2B,PIN_3A,PIN_3B,PIN_4A,PIN_4B}; 
@@ -50,12 +50,12 @@ static int stateChangeTable[4][4] = {{ 0,-1,1,0},{1,0,0,-1},{-1,0,0,1},{0,1,-1,0
 #else
 #define PIN_1 17
 #define PIN_2 27
-#define PIN_3 5
-#define PIN_4 6
+#define PIN_3 16
+#define PIN_4 19
 #define PIN_5 23
 #define PIN_6 24
-#define PIN_7 16
-#define PIN_8 26
+#define PIN_7 5
+#define PIN_8 6
 
 volatile static int encoder_counts[NUM_ENCODERS] = {0};
 volatile static int encoder_pins[8] = {PIN_1,PIN_2,PIN_3,PIN_4,PIN_5,PIN_6,PIN_7,PIN_8}; 
