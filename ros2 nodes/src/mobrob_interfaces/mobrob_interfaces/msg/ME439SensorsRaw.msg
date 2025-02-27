@@ -1,0 +1,14 @@
+int16 a0
+int16 a1
+int16 a2
+int16 a3
+int16 a4
+int16 a5
+int16 a6
+int16 a7
+int32 u0
+int32 u1
+int32 u2
+int16 di
+string db
+builtin_interfaces/Time t

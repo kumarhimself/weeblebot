@@ -1,0 +1,43 @@
+### Build up for "mobrob" for ROS2
+# Updated 2024-10-07
+
+cd ~/ros2_ws/src
+
+# Create the package with appropriate dependencies. 
+ros2 pkg create mobrob --build-type ament_python --license Apache-2.0 --dependencies mobrob_interfaces example_interfaces geometry_msgs sensor_msgs visualization_msgs ros2launch
+
+---
+# Edit the files. 
+wheel_control
+sensors_raw
+sensors_processor
+set_desired_wheel_speeds
+mobile_robot_operate.launch.py
+
+---
+
+# To get the "encoders and motors" module working, call it as: 
+import mobrob.encoders_and_motors as encmot
+
+---
+
+# To integrate launch files, add this to package.xml: 
+import os
+from glob import glob
+...
+
+and later, add a glob to search for the launch files and include them: 
+setup(
+    # Other parameters ...
+    data_files=[
+        # ... Other data files
+        # Include all launch files.
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*')))
+    ]
+)
+
+
+---
+# Build it. 
+colcon build --symlink-install --packages-select mobrob mobrob 
+
