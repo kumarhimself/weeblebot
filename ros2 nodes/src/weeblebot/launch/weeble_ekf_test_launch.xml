@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="robot_localization" exec="ekf_node" name="ekf_localization">
+    <param from="$(find-pkg-share weeblebot)/config/ekf.yaml" />
+  </node>
+  <node pkg="weeblebot" exec="imu_mpu6050_node" name="imu_mpu6050">
+    <remap from="/imu_mpu6050" to="/imu/data" />
+  </node>
+  <!--<node pkg="weeblebot" exec="odom_node" name="wheel_odom">
+    <remap from="" to="" />
+  </node>-->
+</launch>
