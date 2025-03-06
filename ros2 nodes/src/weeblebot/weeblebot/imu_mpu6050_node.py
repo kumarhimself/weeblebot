@@ -31,8 +31,8 @@ class IMUNode(Node):
         accel, gyro, _ = self.imu.get_all_data()
         self.counter += 1
 
-        imu_msg.header.seq = self.counter
-        imu_msg.header.stamp = rclpy.get_clock().now()
+        #imu_msg.header.seq = self.counter
+        imu_msg.header.stamp = rclpy.get_clock().now().to_msg()
         imu_msg.header.frame_id = 'imu'
         imu_msg.orientation.x = 0.
         imu_msg.orientation.y = 0.
