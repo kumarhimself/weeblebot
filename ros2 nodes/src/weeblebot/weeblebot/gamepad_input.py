@@ -7,20 +7,6 @@ from rclpy.node import Node
 from sensor_msgs.msg import Joy
 import traceback
 
-def get_gamepad(timeout=5):
-    '''
-    function to initiate the bluetooth connection to a dualshock 3 controller
-    '''
-    for _ in range(timeout): # don't try infinitely because that's annoying
-        try:
-            print('attempting to connect...')
-            for i in range(5): # the event number is not entirely predictable
-                gamepad = InputDevice(f'/dev/input/event{i}') # use evdev to make an inputdevice object
-                if "PLAYSTATION(R)3 Controller" in str(gamepad) and "Motion" not in str(gamepad): # filter out all other devices
-                    print('success')
-                    return gamepad
-        except:
-            pass
 
 class GamepadParser(Node):
 
@@ -28,7 +14,7 @@ class GamepadParser(Node):
         super().__init__('gamepad_input') # start the node with a name
         self.pub = self.create_publisher(Joy, 'gamepad', 1)
         self.inputs_dict = {"ABS_X":128,"ABS_Y":128,"ABS_RX":128,"ABS_RY":128} # dict to store most recent states
-        gamepad = get_gamepad()
+        gamepad = self.get_gamepad()
         try:
             while rclpy.ok():
                 for event in gamepad.read_loop():
@@ -39,15 +25,34 @@ class GamepadParser(Node):
                         self.inputs_dict[event_name] = event.value # update the dict with the value
                         # print(inputs_dict)
                         gamepad_msg = Joy() # prepare a message to send
-                        gamepad_msg.header.stamp = self.get_clock().now()
+                        gamepad_msg.header.stamp = self.get_clock().now().to_msg()
                         # the two joysticks are packed in (lx, ly), (rx, ry) order
-                        gamepad_msg.axes = [self.inputs_dict[key] for key in ["ABS_X","ABS_Y","ABS_RX","ABS_RY"]]
+                        print(self.inputs_dict)
+                        gamepad_msg.axes = [float(self.inputs_dict[key]) for key in ["ABS_X","ABS_Y","ABS_RX","ABS_RY"]]
                         # TODO: pack relevant button states into the message
                         self.pub.publish(gamepad_msg)
                     if not rclpy.ok():
                         break
         except KeyboardInterrupt:
             return
+
+
+    def get_gamepad(self, timeout=5):
+        '''
+        function to initiate the bluetooth connection to an xbox controller
+        '''
+        for _ in range(timeout): # don't try infinitely because that's annoying
+            try:
+                print('attempting to connect...')
+                for i in range(5): # the event number is not entirely predictable
+                    print('debug')
+                    gamepad = InputDevice(f'/dev/input/event{i}') # use evdev to make an inputdevice object
+                    if "Xbox Wireless Controller" in gamepad.name: # filter out all other devices
+                        print('success')
+                        return gamepad
+            except Exception as e:
+                print(e)
+                pass
 
 
 def main(args=None):
