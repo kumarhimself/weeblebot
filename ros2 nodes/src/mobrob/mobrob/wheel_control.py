@@ -101,8 +101,8 @@ class WheelControlNode(Node):
     def update_encoders(self):
         #Make messages to fill later.
         msg_motor_commands = ME439MotorCommands()
-        msg_motor_commands.cmd0 = 0
-        msg_motor_commands.cmd1 = 0
+        msg_motor_commands.cmd0 = 0.
+        msg_motor_commands.cmd1 = 0.
 
         msg_wheel_angles = ME439WheelAngles()
         msg_wheel_angles.ang0 = 0. 
@@ -125,7 +125,7 @@ class WheelControlNode(Node):
         #update PID loops
         self.qe0.update(leftEnc, dt)
         self.mc0.update_current_value(self.qe0.meters_per_second, dt) 
-        msg_motor_commands.cmd0 = self.mc0.motor_command
+        msg_motor_commands.cmd0 = float(self.mc0.motor_command)
         msg_wheel_angles.ang0 = self.qe0.radians
         msg_wheel_displacements.disp0 = self.qe0.meters
         
@@ -133,7 +133,7 @@ class WheelControlNode(Node):
         #update PID loops
         self.qe1.update(rightEnc, dt)
         self.mc1.update_current_value(self.qe1.meters_per_second, dt) 
-        msg_motor_commands.cmd1 = self.mc1.motor_command
+        msg_motor_commands.cmd1 = float(self.mc1.motor_command)
         msg_wheel_angles.ang1 = self.qe1.radians
         msg_wheel_displacements.disp1 = self.qe1.meters
         

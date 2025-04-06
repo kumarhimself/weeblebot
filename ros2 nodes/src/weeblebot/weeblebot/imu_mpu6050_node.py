@@ -32,7 +32,7 @@ class IMUNode(Node):
         self.counter += 1
 
         #imu_msg.header.seq = self.counter
-        imu_msg.header.stamp = rclpy.get_clock().now().to_msg()
+        imu_msg.header.stamp = self.get_clock().now().to_msg()
         imu_msg.header.frame_id = 'imu'
         imu_msg.orientation.x = 0.
         imu_msg.orientation.y = 0.
@@ -42,14 +42,14 @@ class IMUNode(Node):
             [0.,0.,0.,
              0.,0.,0.,
              0.,0.,0.])
-        imu_msg.angular_velocity.x = gyro['x']*3.1415926/180
+        imu_msg.angular_velocity.x = gyro['x']*3.1415926/180    # hopefully converting to rad/s
         imu_msg.angular_velocity.y = gyro['y']*3.1415926/180
         imu_msg.angular_velocity.z = gyro['z']*3.1415926/180
         imu_msg.angular_velocity_covariance = np.array(
             [0.,0.,0.,
              0.,0.,0.,
              0.,0.,0.])
-        imu_msg.linear_acceleration.x = accel['x']
+        imu_msg.linear_acceleration.x = accel['x']  # i think these are in m/s^2
         imu_msg.linear_acceleration.y = accel['y']
         imu_msg.linear_acceleration.z = accel['z']
         imu_msg.linear_acceleration_covariance = np.array(

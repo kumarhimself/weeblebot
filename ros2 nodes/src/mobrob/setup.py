@@ -30,6 +30,7 @@ setup(
 		'set_desired_wheel_speeds=mobrob.set_desired_wheel_speeds:main', 
 		'mobile_robot_kinematic_simulator=mobrob.mobile_robot_kinematic_simulator:main', 
 		'mobile_robot_animator=mobrob.mobile_robot_animator:main', 
+        'encoder_odom=mobrob.encoder_odom:main',
         'set_desired_wheel_speeds_by_path_specs=mobrob.set_desired_wheel_speeds_by_path_specs:main'
         ],
     },

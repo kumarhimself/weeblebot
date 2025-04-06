@@ -44,6 +44,7 @@ def generate_launch_description():
             executable='wheel_control',
             name='wheel_motor_node',
             output='screen',
+            parameters=[os.path.join(get_package_share_directory("weeblebot"), 'config', 'robot_info.yaml')],
            ),
         launch_ros.actions.Node(
             package='mobrob',

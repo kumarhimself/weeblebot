@@ -11,8 +11,8 @@ import rclpy
 from rclpy.node import Node
 import numpy as np
 import traceback 
-from geometry_msgs.msg import Pose2D
-from geometry_msgs.msg import TwistWithCovarianceStamped
+from geometry_msgs.msg import Pose2D, Quaternion
+from nav_msgs.msg import Odometry
 from mobrob_interfaces.msg import ME439WheelDisplacements
 
     
@@ -23,30 +23,28 @@ class WheelOdom(Node):
         # Variables for the robot's wheel displacements (to keep knowledge of it from one step to the next)
         self.d_left_previous = 0.
         self.d_right_previous = 0.
+        self.time_prev = self.get_clock().now().nanoseconds
+
+        self.theta_est = 0.
+        self.position_est = np.array([0.,0.])
         # Rate to set how often the estimated "pose" is published
-        self.f = 10.     # Hz 
+        self.freq = 10.     # Hz 
         #==============================================================================
         # # Get parameters from rosparam
         # # NOTE this is the Estimator, so we should use the "model" parameters. 
         # # This will enable us to compare the "simulated" robot (considered the true robot location) 
         # #  and the "estimated" robot (position estimated based on dead-reckoning)
         #==============================================================================
-        self.declare_parameters(
-        namespace='',
-        parameters=[
-            ('wheel_width', 0.584),
-            ('wheel_diameter', 0.28),
-        ])
+        self.wheel_width = self.declare_parameter('/wheel_width', 0.584).value
     
         self.sub_wheel_disps = self.create_subscription( ME439WheelDisplacements, '/wheel_displacements', self.wheel_odom, 1 )  
             
-        self.pub_robot_twist_estimated = self.create_publisher(TwistWithCovarianceStamped, '/wheel_odom', 1)
-        self.robot_twist_estimated_message = TwistWithCovarianceStamped()
+        self.pub_robot_odom_estimated = self.create_publisher(Odometry, 'odometry/wheels', 1)
 
         # =============================================================================
         #     # Timer to set a publication rate. This calls a publication callback
         # =============================================================================
-        self.pub_timer = self.create_timer(1.0/self.f, self.pub_callback)
+        self.pub_timer = self.create_timer(1.0/self.freq, self.pub_callback)
     
     # =============================================================================
     #     # Callback to do the publication
@@ -54,72 +52,73 @@ class WheelOdom(Node):
     # =============================================================================
     def pub_callback(self): 
         # Pack the message
-        self.robot_twist_estimated_message.header.stamp = rclpy.get_clock().now().to_msg()
-        self.robot_twist_estimated_message.header.frame_id = 'base_link'
-        self.robot_twist_estimated_message.twist.linear.x = 0
-        self.robot_twist_estimated_message.twist.linear.y = 0
-        self.robot_twist_estimated_message.twist.angular.z = 0
-        self.robot_twist_estimated_message.twist.covariance = [0.1, 0,   0, 0, 0, 0,
-                                                               0,   0.1, 0, 0, 0, 0,
-                                                               0,   0,   0, 0, 0, 0,
-                                                               0,   0,   0, 0, 0, 0,
-                                                               0,   0,   0, 0, 0, 0,
-                                                               0,   0,   0, 0, 0, 0.1,]
+        odom_estimated_msg = Odometry()
+        odom_estimated_msg.header.stamp = self.get_clock().now().to_msg()
+        odom_estimated_msg.header.frame_id = 'odom' # fixed world frame
+        odom_estimated_msg.child_frame_id = 'base_link' # frame of the robot base link
+        odom_estimated_msg.twist.twist.linear.x = self.speed
+        odom_estimated_msg.twist.twist.linear.y = 0. #TODO: make this consider strafing
+        odom_estimated_msg.twist.twist.angular.z = self.spin_rate
+        odom_estimated_msg.twist.covariance = [0.1, 0.,  0., 0., 0., 0.,
+                                                               0.,  0.1, 0., 0., 0., 0.,
+                                                               0.,  0.,  0., 0., 0., 0.,
+                                                               0.,  0.,  0., 0., 0., 0.,
+                                                               0.,  0.,  0., 0., 0., 0.,
+                                                               0.,  0.,  0., 0., 0., 0.1,]
+        odom_estimated_msg.pose.pose.position.x = self.position_est[0]
+        odom_estimated_msg.pose.pose.position.y = self.position_est[1]
+        odom_estimated_msg.pose.pose.orientation = self.orientation_est
+        odom_estimated_msg.pose.covariance = [0.1, 0.,  0., 0., 0., 0.,
+                                                             0.,  0.1, 0., 0., 0., 0.,
+                                                             0.,  0.,  0., 0., 0., 0.,
+                                                             0.,  0.,  0., 0., 0., 0.,
+                                                             0.,  0.,  0., 0., 0., 0.,
+                                                             0.,  0.,  0., 0., 0., 0.1,]
         # Publish the pose
-        self.pub_robot_twist_estimated.publish(self.robot_twist_estimated_message)
+        self.pub_robot_odom_estimated.publish(odom_estimated_msg)
         
         
     # =============================================================================
     # # Callback function for "dead-reckoning" (alternatively called "odometry")
     # =============================================================================
     def wheel_odom(self, msg_in): 
-    ####    CODE HERE: extract the wheel displacements from the message in variable msg_in. 
-        # REPLACE the zeros with the proper expressions. 
-        # Look in the message file for ME439WheelDisplacements.msg to find the variable 
-        # names for left and right wheel displacements. 
-        # Or, just ask ROS: "ros2 interface show mobrob_interfaces/msg/ME439WheelDisplacements"
-        # Syntax is msg_in.variable_name
+        # read displacements from message
         d_left = msg_in.disp0
         d_right = msg_in.disp1
         
-    ####    CODE HERE: Compute the CHANGE in displacement of each wheel
-        # Old values are in self.d_left_previous and self.d_right_previous.        
-        # REPLACE the zeros with the proper expressions. 
+        # Compute the CHANGE in displacement of each wheel
+        # Old values are in self.d_left_previous and self.d_right_previous.
         diff_left = d_left - self.d_left_previous
         diff_right = d_right - self.d_right_previous
         
-    ####    CODE HERE: STORE the new values of d_left and d_right for the next call
-        # REPLACE the zeros with the proper expressions. 
+        # STORE the new values of d_left and d_right for the next call
         self.d_left_previous = d_left
         self.d_right_previous = d_right
         
-    ####    CODE HERE: compute change in path length and change in angle
-        # REPLACE the zeros with the proper expressions (see lecture notes). 
+        # compute change in path length and change in angle
         # use "diff_left" and "diff_right" which were set a few lines above. 
         diff_pathlength = (diff_left + diff_right)/2
         diff_theta = (diff_right - diff_left)/self.wheel_width
+        time_curr = self.get_clock().now().nanoseconds
+        diff_time = (time_curr - self.time_prev)/1e9
 
-    ####    CODE HERE: compute the AVERAGE heading angle (theta) during the movement 
-        # That's halfway between the old angle and the new.
-        # This makes the dead-reckoning more accurate than using just the old theta or the new one. 
-        theta_avg = self.theta_estimated + diff_theta/2
-        
-    ####    CODE HERE: compute the change in position and heading according to the dead-reckoning equations
-        # REPLACE the zeros with the proper expressions (see lecture notes). 
-        # Remember that sine and cosine are in the "numpy" package, which has been imported as "np"
-        self.r_center_world_estimated[0] = self.r_center_world_estimated[0] + -np.sin(theta_avg)*diff_pathlength      # x-direction position
-        self.r_center_world_estimated[1] = self.r_center_world_estimated[1] + np.cos(theta_avg)*diff_pathlength      # y-direction position
-        self.theta_estimated = self.theta_estimated + diff_theta
+        self.speed = diff_pathlength/diff_time
+        self.spin_rate = diff_theta/diff_time
 
-    #==============================================================================
-    #     End of function "dead_reckoning"
-    #==============================================================================
-    
-    #==============================================================================
-    #     # End of function "set_pose"
-    #==============================================================================
-    
-    
+        self.time_prev = time_curr
+
+        # average theta during the last time period is the midway point between old theta and new theta
+        theta_avg = self.theta_est + diff_theta/2
+
+        self.position_est[0] -= np.sin(theta_avg)*diff_pathlength
+        self.position_est[1] += np.cos(theta_avg)*diff_pathlength
+
+        self.theta_est += diff_theta # update estimate of theta to match new position
+        self.orientation_est = Quaternion(
+            w = np.cos(self.theta_est/2),
+            x=0.,
+            y=0.,
+            z=np.sin(self.theta_est/2))
     
 def main(args=None): 
     try: 
