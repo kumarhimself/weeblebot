@@ -27,6 +27,7 @@ setup(
             'test = weeblebot.test:main',
             'gamepad_input = weeblebot.gamepad_input:main',
             'imu_mpu6050_node = weeblebot.imu_mpu6050_node:main',
+            'gamepad_control = weeblebot.gamepad_control:main',
         ],
     },
 )

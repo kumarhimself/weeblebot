@@ -27,6 +27,9 @@ class WheelOdom(Node):
 
         self.theta_est = 0.
         self.position_est = np.array([0.,0.])
+        self.speed = 0.
+        self.spin_rate = 0.
+        self.orientation_est = 0.
         # Rate to set how often the estimated "pose" is published
         self.freq = 10.     # Hz 
         #==============================================================================
@@ -60,20 +63,20 @@ class WheelOdom(Node):
         odom_estimated_msg.twist.twist.linear.y = 0. #TODO: make this consider strafing
         odom_estimated_msg.twist.twist.angular.z = self.spin_rate
         odom_estimated_msg.twist.covariance = [0.1, 0.,  0., 0., 0., 0.,
-                                                               0.,  0.1, 0., 0., 0., 0.,
-                                                               0.,  0.,  0., 0., 0., 0.,
-                                                               0.,  0.,  0., 0., 0., 0.,
-                                                               0.,  0.,  0., 0., 0., 0.,
-                                                               0.,  0.,  0., 0., 0., 0.1,]
+                                               0.,  0.1, 0., 0., 0., 0.,
+                                               0.,  0.,  0., 0., 0., 0.,
+                                               0.,  0.,  0., 0., 0., 0.,
+                                               0.,  0.,  0., 0., 0., 0.,
+                                               0.,  0.,  0., 0., 0., 0.1,]
         odom_estimated_msg.pose.pose.position.x = self.position_est[0]
         odom_estimated_msg.pose.pose.position.y = self.position_est[1]
         odom_estimated_msg.pose.pose.orientation = self.orientation_est
         odom_estimated_msg.pose.covariance = [0.1, 0.,  0., 0., 0., 0.,
-                                                             0.,  0.1, 0., 0., 0., 0.,
-                                                             0.,  0.,  0., 0., 0., 0.,
-                                                             0.,  0.,  0., 0., 0., 0.,
-                                                             0.,  0.,  0., 0., 0., 0.,
-                                                             0.,  0.,  0., 0., 0., 0.1,]
+                                              0.,  0.1, 0., 0., 0., 0.,
+                                              0.,  0.,  0., 0., 0., 0.,
+                                              0.,  0.,  0., 0., 0., 0.,
+                                              0.,  0.,  0., 0., 0., 0.,
+                                              0.,  0.,  0., 0., 0., 0.1,]
         # Publish the pose
         self.pub_robot_odom_estimated.publish(odom_estimated_msg)
         

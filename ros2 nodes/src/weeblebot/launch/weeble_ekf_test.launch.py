@@ -54,4 +54,17 @@ def generate_launch_description():
             remappings=[('wheel_odom', 'wheel/twist')],
             parameters=[os.path.join(get_package_share_directory("weeblebot"), 'config', 'robot_info.yaml')],
            ),
+        launch_ros.actions.Node(
+            package='weeblebot',
+            executable='gamepad_input',
+            name='gamepad_reader_node',
+            output='screen',
+           ),
+        launch_ros.actions.Node(
+            package='weeblebot',
+            executable='gamepad_control',
+            name='gamepad_processing_node',
+            output='screen',
+            remappings=[('motors_speed', 'wheel_speeds_desired')],
+           ),
 ])
