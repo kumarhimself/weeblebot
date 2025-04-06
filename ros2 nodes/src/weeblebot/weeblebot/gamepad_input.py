@@ -27,7 +27,6 @@ class GamepadParser(Node):
                         gamepad_msg = Joy() # prepare a message to send
                         gamepad_msg.header.stamp = self.get_clock().now().to_msg()
                         # the two joysticks are packed in (lx, ly), (rx, ry) order
-                        print(self.inputs_dict)
                         gamepad_msg.axes = [float(self.inputs_dict[key]) for key in ["ABS_X","ABS_Y","ABS_RX","ABS_RY"]]
                         # TODO: pack relevant button states into the message
                         self.pub.publish(gamepad_msg)

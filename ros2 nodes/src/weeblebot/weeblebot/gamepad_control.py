@@ -4,26 +4,26 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from motors.msg import motors_speed_msg
+from mobrob_interfaces.msg import ME439WheelSpeeds
 import traceback
 
 class TeleopNode(Node):
 
     def __init__(self):
         super().__init__('gamepad_control')
-        self.pub = self.create_publisher(motors_speed_msg, 'motors_speed', 1)
-        self.sub = self.create_subscription(Joy, 'gamepad', self.tank_drive)
+        self.pub = self.create_publisher(ME439WheelSpeeds, 'motors_speed', 1)
+        self.sub = self.create_subscription(Joy, 'gamepad', self.tank_drive, 1)
 
     def tank_drive(self, msg_in):
         '''
         Callback function to control motors based on joystick inputs using a tank drive scheme
         '''
-        stick_LY = deadband_scale(msg_in.axes[1])
-        stick_RY = deadband_scale(msg_in.axes[3])
-        msg = motors_speed_msg()
+        stick_LY = deadband_scale(msg_in.axes[1], low=32767, high=-32768, thresh=1000)
+        stick_RY = deadband_scale(msg_in.axes[3], low=32767, high=-32768, thresh=1000)
+        msg = ME439WheelSpeeds()
         # y components of joystick inputs are directly mapped to motor powers
-        msg.left_motor_speed = scale_output(stick_LY)
-        msg.right_motor_speed = scale_output(stick_RY)
+        msg.v0 = float(stick_LY)
+        msg.v1 = float(stick_RY)
         self.pub.publish(msg)
 
     def single_joystick(self, msg_in):
@@ -36,9 +36,9 @@ class TeleopNode(Node):
         stick_LY = deadband_scale(msg_in.axes[1])
         # y component of joystick input is used to control linear speed
         # x component of joystick input is used to control angular speed
-        msg = motors_speed_msg()
-        msg.left_motor_speed = scale_output(stick_LY + 0.5 * stick_LX)
-        msg.right_motor_speed = scale_output(stick_LY - 0.5 * stick_LX)
+        msg = ME439WheelSpeeds()
+        msg.v0 = scale_output(stick_LY + 0.5 * stick_LX)
+        msg.v1 = scale_output(stick_LY - 0.5 * stick_LX)
         self.pub.publish(msg)
 
     def heading_control(self, msg_in):
@@ -77,7 +77,7 @@ def scale_output(val, low=300, high=480) -> int:
         val = -1
     out_range = high - low # scaling coef for output
     sign = 1 if val > 0 else -1 # in/out signs should match
-    return int(sign * (out_range * abs(val) + low)) # cast the output to an int so ros can handle it
+    return int(sign * (out_range * abs(val) + low))
 
 
 def main(args=None):
