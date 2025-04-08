@@ -7,7 +7,7 @@ import serial
 import traceback 
 
 # Use GPIOZERO for both encoders and motors
-from gpiozero import RotaryEncoder, PhaseEnableMotor
+from gpiozero import RotaryEncoder, PhaseEnableMotor, OutputDevice
 
 # IMPORT the custom messages: 
 # we import it from the ROS package we created it in (here "mobrob_interfaces") with an extension of .msg ...
@@ -28,9 +28,11 @@ class WheelControlNode(Node):
         
         # Encoders and Motors from GPIOZERO
         self.e0 = RotaryEncoder(17,27,max_steps=0,bounce_time=None)
-        self.e1 = RotaryEncoder(23,24,max_steps=0,bounce_time=None)
-        self.m0 = PhaseEnableMotor(5,12)
-        self.m1 = PhaseEnableMotor(6,13)
+        self.e1 = RotaryEncoder(16,19,max_steps=0,bounce_time=None)
+        self.m0 = PhaseEnableMotor(24,12)
+        self.m1 = PhaseEnableMotor(25,13)
+        self.en0 = OutputDevice(22, active_high=True, initial_value=True)
+        self.en1 = OutputDevice(23, active_high=True, initial_value=True)
         
         # This Publish Wheel Displacements for use in Dead Reckoning
         self.pub_motor_commands = self.create_publisher(ME439MotorCommands, '/motor_commands', 1)
@@ -48,15 +50,15 @@ class WheelControlNode(Node):
         
         self.encoder_update_rate_hz = self.declare_parameter('/encoder_update_rate_hz', 100).value 
         
-        self.e0_direction_sign = self.declare_parameter('/left_encoder_sign', 1).value 
+        self.e0_direction_sign = self.declare_parameter('/left_encoder_sign', -1).value 
         self.e1_direction_sign = self.declare_parameter('/right_encoder_sign', -1).value 
         
         self.m0_direction_sign = self.declare_parameter('/left_motor_sign', 1).value 
-        self.m1_direction_sign = self.declare_parameter('/right_motor_sign', -1).value 
+        self.m1_direction_sign = self.declare_parameter('/right_motor_sign', 1).value 
         
         self.integral_error_max = self.declare_parameter('/vel_integral_limit', 0.2).value 
         self.integral_resetting = self.declare_parameter('/integral_resetting', False).value 
-        self.cmd_rate_of_change_max = self.declare_parameter('/cmd_rate_of_change_max', 2).value 
+        self.cmd_rate_of_change_max = self.declare_parameter('/cmd_rate_of_change_max', 3).value 
         self.motor_command_max = self.declare_parameter('/motor_command_max', 1.0).value 
         
         self.Kf0 = self.declare_parameter('/vel_left_f', 0).value 
@@ -155,6 +157,8 @@ def main(args=None):
         rclpy.spin(wheel_control_node_instance)
         
     except: 
+        wheel_control_node_instance.en0.off()
+        wheel_control_node_instance.en1.off()
         traceback.print_exc()
         
     # self.m0.stop()
