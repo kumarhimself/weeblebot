@@ -40,7 +40,7 @@ def generate_launch_description():
             remappings=[('imu_mpu6050', 'imu/data')],
            ),
         launch_ros.actions.Node(
-            package='mobrob',
+            package='weeblebot',
             executable='wheel_control',
             name='wheel_motor_node',
             output='screen',
