@@ -117,10 +117,12 @@ class FPID_controller ():
         self.motor_command = np.clip(self.motor_command, -self.motor_command_max, self.motor_command_max) 
             
     def command_motor(self): 
-        if self.motor_command>0:
+        if self.motor_command>0.1:
             self.motor.forward(self.motor_command)
-        else:
+        elif self.motor_command<-0.1:
             self.motor.backward(-self.motor_command)
+        else:
+            self.motor_stop()
         self.motor_command_previous = self.motor_command
         
     # Function to update the current value    
