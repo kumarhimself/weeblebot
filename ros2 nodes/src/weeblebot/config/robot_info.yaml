@@ -28,7 +28,7 @@
     vel_integral_limit: 0.2
     integral_resetting: false
     cmd_rate_of_change_max: 1000.
-    motor_command_max: 480
+    motor_command_max: 1
     pos_left_p: 500.
     pos_left_i: 200.
     pos_left_d: 0.5

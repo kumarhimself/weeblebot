@@ -61,13 +61,13 @@ class WheelControlNode(Node):
         self.cmd_rate_of_change_max = self.declare_parameter('/cmd_rate_of_change_max', 3).value 
         self.motor_command_max = self.declare_parameter('/motor_command_max', 1.0).value 
         
-        self.Kf0 = self.declare_parameter('/vel_left_f', 0).value 
-        self.Kp0 = self.declare_parameter('/vel_left_p', 2).value 
-        self.Ki0 = self.declare_parameter('/vel_left_i', 20).value 
+        self.Kf0 = self.declare_parameter('/vel_left_f', 1).value 
+        self.Kp0 = self.declare_parameter('/vel_left_p', 0).value 
+        self.Ki0 = self.declare_parameter('/vel_left_i', 0).value 
         self.Kd0 = self.declare_parameter('/vel_left_d', 0).value 
-        self.Kf1 = self.declare_parameter('/vel_right_f', 0).value 
-        self.Kp1 = self.declare_parameter('/vel_right_p', 2).value 
-        self.Ki1 = self.declare_parameter('/vel_right_i', 20).value 
+        self.Kf1 = self.declare_parameter('/vel_right_f', 1).value 
+        self.Kp1 = self.declare_parameter('/vel_right_p', 0).value 
+        self.Ki1 = self.declare_parameter('/vel_right_i', 0).value 
         self.Kd1 = self.declare_parameter('/vel_right_d', 0).value 
         
         # Max encoder increment (full speed) - useful for eliminating errors

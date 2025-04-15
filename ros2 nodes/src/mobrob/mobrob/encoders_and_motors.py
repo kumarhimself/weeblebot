@@ -122,7 +122,7 @@ class FPID_controller ():
         elif self.motor_command<-0.1:
             self.motor.backward(-self.motor_command)
         else:
-            self.motor_stop()
+            self.motor.stop()
         self.motor_command_previous = self.motor_command
         
     # Function to update the current value    
